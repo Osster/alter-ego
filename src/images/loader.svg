@@ -1,0 +1,8 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="350px" height="350px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<style>
+.txt2{letter-spacing:11.3px;font-size:20px; font-family: "Raleway",sans-serif;}
+</style>
+<defs><path id="criclePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/></defs>
+<circle cx="150" cy="150" r="150" fill="#fff"/>
+<g><use href="#criclePath" fill="none"/><text fill="#adadad" textLength="739" class="shake shake-delay txt2"><textPath xlink:href="#criclePath">Creative &amp; innovative design agency.</textPath></text></g>
+</svg>
