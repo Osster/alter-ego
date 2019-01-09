@@ -21,52 +21,55 @@
     </h1>
 
     <div class="header-right">
-      <a href="/start-a-project" title="" class="start-project">Start a project</a>
-      <a href="javascript:;" title="Navigation" class="menu-icon" @click="toggleMenu"><em>Меню</em><span></span></a>
+      <a href="#" title="" class="start-project">Start a project</a>
+      <a href="javascript:void(0)" title="Navigation" class="menu-icon" @click="handleMenu"><em>Меню</em><span></span></a>
     </div>
 
-    <section class="main-navigation" style="transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+    <section class="main-navigation" :style="mainNavigationStyle">
       <div class="container clearfix">
         <div class="container-small clearfix">
           <nav>
             <ul>
-              <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);"><a href="/work/design" class="draw"
-                                                                                title="">Work</a></li>
-              <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);"><a href="/agency" class="draw" title="">Agency</a>
+              <li>
+                <a href="/event.html" class="draw" title="">Event</a>
               </li>
-              <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);"><a href="/contact" class="draw" title="">Contact</a>
+              <li>
+                <a href="/content.html" class="draw" title="">Content</a>
               </li>
-              <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);"><a href="/blog" class="draw"
-                                                                                title="">Blog</a></li>
+              <li>
+                <a href="/digital.html" class="draw" title="">Digital</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="draw" title="">Contact</a></li>
             </ul>
           </nav>
-          <article class="map-icon" style="opacity: 0;">
-            Get in touch<br>
+          <article class="map-icon">
+            Мы на связи<br>
             <a href="mailto:info@alterego.by">info@alterego.by</a>
           </article>
           <div class="social">
-            <a href="https://www.facebook.com/trionndesignagency/" target="_blank" title="Facebook"
+            <a href="#" target="_blank" title="Facebook"
                class="facebook wow fadeInUp" data-wow-delay="0.1s">
               <svg width="28px" height="28px" role="img" class="facebook-svg">
-                <use xlink:href="./../../images/svg_symbols.svg#fb-logo"></use>
+                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
               </svg>
             </a>
-            <a href="http://www.linkedin.com/company/2715714" target="_blank" class="linkedin wow fadeInUp"
+            <a href="#" target="_blank" class="linkedin wow fadeInUp"
                data-wow-delay="0.2s" title="Linkedin">
               <svg width="28px" height="28px" role="img" class="linkedin-svg">
-                <use xlink:href="./../../images/svg_symbols.svg#linkedin-logo"></use>
+                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
               </svg>
             </a>
-            <a href="https://www.instagram.com/trionndesign/" target="_blank" class="instagram wow fadeInDown"
+            <a href="#" target="_blank" class="instagram wow fadeInDown"
                data-wow-delay="0.3s" title="Instagram">
               <svg width="28px" height="28px" role="img" class="instagram-svg">
-                <use xlink:href="./../../images/svg_symbols.svg#instagram-logo"></use>
+                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
               </svg>
             </a>
-            <a href="https://twitter.com/trionn_design" target="_blank" class="twitter wow fadeInUp"
+            <a href="#" target="_blank" class="twitter wow fadeInUp"
                data-wow-delay="0.4s" title="Twitter">
               <svg width="28px" height="28px" role="img" class="twitter-svg">
-                <use xlink:href="./../../images/svg_symbols.svg#twitter-logo"></use>
+                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
               </svg>
             </a>
           </div>

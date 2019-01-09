@@ -1,6 +1,6 @@
 <%= _.template(require('./../includes/header.html'))([]) %>
 
-    <div class="landing clearfix" id="landing">
+    <div class="landing clearfix" id="landing" :style="showLanding ? '' : 'opacity: 0;'">
       <div class="landing-wrapper" style="height: 976px;">
         <div class="lion">
           <div class="lion" id="l_svg">

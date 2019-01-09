@@ -1,5 +1,5 @@
 import { WOW } from 'wowjs';
-import Vue from 'vue';
+// import Vue from 'vue';
 import sprite from "../src/images/svg_symbols.svg";
 
 const wow = new WOW(
@@ -19,17 +19,43 @@ const wow = new WOW(
 wow.init();
 
 
-var app = new Vue({
-  el: '#app',
+new Vue({
+  el: '#wrapper',
   data: {
-    message: 'Hello Vue!'
+    pageScroll: 0,
+    mainNavigation: false,
+    mainNavigationStyle: '',
+    showLanding: true,
   },
   mounted() {
-    console.log('vue mounted');
+    document.removeEventListener('scroll', this.handlePageScroll);
+    document.addEventListener('scroll', this.handlePageScroll);
+  },
+  watch: {
+    pageScroll(val) {
+      if (val > window.outerHeight) {
+        this.showLanding = false;
+      } else {
+        this.showLanding = true;
+      }
+    },
   },
   methods: {
-    toggleMenu() {
-      console.log('toggleMenu');
-    }
+    handleMenu() {
+      const body = document.body;
+      this.mainNavigation = !this.mainNavigation;
+      this.mainNavigationStyle = this.mainNavigation
+        ? 'transform: matrix(1, 0, 0, 1, 0, 0);'
+        : 'transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);';
+      
+      if (this.mainNavigation) {
+        body.classList.add('navigation-visible');
+      } else {
+        body.classList.remove('navigation-visible');
+      }
+    },
+    handlePageScroll(e) {
+      this.pageScroll = e.pageY;
+    },
   },
 });
