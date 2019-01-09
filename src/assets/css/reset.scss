@@ -5,7 +5,7 @@ html {
   font-size: 18px;
   line-height: 26px;
   font-weight: 500;
-  color: $color_1;
+  color: $color_gray_darkest;
   -webkit-text-size-adjust: none;
   -webkit-font-size-adjust: none;
   width: 100%;
@@ -13,7 +13,7 @@ html {
   font-weight: 500;
 }
 body {
-  background: #fff;
+  background: $color_white;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
