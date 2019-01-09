@@ -1,8 +1,29 @@
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const ExtractCssChunks = require("extract-css-chunks-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const fs = require('fs');
+const path = require('path');
+
+
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map(item => {
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `./${name}.${extension}`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      inject: false,
+    })
+  })
+}
+
+const htmlPlugins = generateHtmlPlugins('./src/html/views');
+
 
 const entry = {
   "index": ["./src/index.js", "./src/index.scss"],
@@ -19,11 +40,15 @@ const _module = {
     },
     {
       test: /\.html$/,
+      include: path.resolve(__dirname, 'src/html/includes'),
       use: [
+        'raw-loader',
+        /*
         {
           loader: "html-loader",
           options: { minimize: true }
-        }
+        },
+        */
       ]
     },
     {
@@ -44,6 +69,7 @@ const _module = {
           options: {
             limit: 5000,
             name: '[name].[ext]',
+            publicPath: 'images/',
             outputPath: 'images/'
           }
         }
@@ -75,10 +101,12 @@ const _module = {
 };
 
 const plugins = [
+  /*
   new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
   }),
+  */
   new MiniCssExtractPlugin({
     filename: "[name].css",
     chunkFilename: "[id].css"
@@ -89,8 +117,14 @@ const plugins = [
         autoprefixer()
       ]
     }
-  })
-];
+  }),
+  new CopyWebpackPlugin([
+    {
+      from: './src/images',
+      to: './images'
+    },
+  ]),
+].concat(htmlPlugins);
 
 module.exports = {
   entry,
