@@ -1,4 +1,4 @@
-$primary_color: #20a5eb;
+$primary_color: #28537b;
 $color_none: transparent;
 $color_black: #000;
 $color_white: #fff;
@@ -8,7 +8,7 @@ $color_img_hover: lighten($primary_color, 20%);
 
 $color_2: #b3b3b3;
 $color_4: #72706c;
-$color_6: #f9edd4;
+$color_6: #d4e7f9;
 $color_7: #b1ada5;
 $color_8: rgba(255, 255, 255, .9);
 $color_11: #cac8c2;
@@ -18,23 +18,23 @@ $color_14: #aaa292;
 $color_16: #4c4c4c;
 $color_17: #585858;
 
-$font_family_1: 'Raleway', sans-serif;
+$font_family_1: 'Montserrat', sans-serif;
 $font_family_2: 'SimploW00-Black';
-$font_family_3: "SimploW00-Black";
-$font_family_4: "Raleway", sans-serif;
+$font_family_3: 'SimploW00-Black';
+$font_family_4: 'Montserrat', sans-serif;
 
 $border_color_1: lighten($primary_color, 10%);
 $border_color_2: #e0dedb;
 $border_color_3: #c8c7c7;
 $border_color_4: #f28a6a;
 
-$border_top_color_1: #f9edd4;
+$border_top_color_1: #d4e7f9;
 $border_top_color_2: $border_color_1;
-$border_right_color_1: #f9edd4;
+$border_right_color_1: #d4e7f9;
 $border_right_color_2: $border_color_1;
-$border_bottom_color_1: #f9edd4;
+$border_bottom_color_1: #d4e7f9;
 $border_bottom_color_2: $border_color_1;
-$border_left_color_1: #f9edd4;
+$border_left_color_1: #d4e7f9;
 $border_left_color_2: $border_color_1;
 
 
@@ -263,6 +263,7 @@ $border_left_color_2: $border_color_1;
   padding: 30px;
   z-index: 1;
   border: 0;
+
   &::before {
     box-sizing: border-box;
     content: '';
@@ -344,9 +345,7 @@ $border_left_color_2: $border_color_1;
       margin-left: 15px;
     }
     svg {
-      path {
-        fill: #f9edd4;
-      }
+      fill: $color_6;
     }
   }
 }
@@ -385,7 +384,6 @@ $border_left_color_2: $border_color_1;
   float: left;
   .more {
     transition: all 0.8s ease 0s;
-
     display: inline-block;
     width: 45px;
     height: 18px;
@@ -394,9 +392,7 @@ $border_left_color_2: $border_color_1;
       margin-left: 15px;
     }
     svg {
-      path {
-        fill: #f9edd4;
-      }
+      fill: $color_6;
     }
   }
   &:hover {
@@ -2079,7 +2075,7 @@ nav {
         top: 0;
         width: 100%;
         z-index: -1;
-        background-blend-mode: color-burn;
+        background-blend-mode: multiply;
         background-size: cover;
 
       }
@@ -2721,16 +2717,19 @@ nav {
       transition: all 0.8s ease 0s;
       position: absolute;
       content: "";
-      right: 30px;
+      right: 18px;
       top: 20px;
-      width: 80px;
+      width: 45px;
       height: 35px;
-      background: url(./images/arrow2.svg) right center no-repeat;
-      background-size: auto 25px;
+      -webkit-mask: url(./images/arrow.svg) no-repeat 100%;
+      mask: url(./images/arrow.svg) no-repeat 100%;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $color_6;
     }
     &:hover {
       &:after {
-        right: 15px;
+        right: 8px;
       }
     }
   }
@@ -3524,8 +3523,9 @@ nav {
   svg {
     height: 80%;
     top: 10%;
+    left: 10%;
     position: relative;
-    width: 100%;
+    width: auto;
   }
 }
 

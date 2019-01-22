@@ -97,6 +97,12 @@ h1 {
     -webkit-animation: bg-pos-move 11s infinite alternate linear, bounce;
     -ms-animation: bg-pos-move 11s infinite alternate linear, bounce;
     -o-animation: bg-pos-move 11s infinite alternate linear, bounce;
+
+    svg{
+      width: 65px;
+      height: 65px;
+      fill: #FFF;
+    }
   }
 }
 h2 {
