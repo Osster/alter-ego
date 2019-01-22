@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alter Ego Group</title>
+</head>
+<body>
+
+<div id="wrapper" class="wrapanim varWrapperClass">
+    <header>
+        <h1>
+            <a href="/" title="Alter Ego Group" class="logo">
+					<span class="band">
+                        <img src="./images/svg/alterego-logo.svg" alt="Alter Ego Group Logo" height="70px" width="100px" />
+					</span>
+            </a>
+            <span>Alter Ego Group.<br> experienced ui/ux team<br> branding design agency.</span>
+        </h1>
+
+        <div class="header-right">
+            <a href="/start-a-project" title="" class="start-project">Start a project</a>
+            <a href="javascript:;" title="Navigation" class="menu-icon"
+               @click="toggleMenu"><em>Menu</em><span></span></a>
+        </div>
+
+        <section class="main-navigation" style="transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+            <div class="container clearfix">
+                <div class="container-small clearfix">
+                    <nav>
+                        <ul>
+                            <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);">
+                                <a href="/work/design" data-hover="work" class="draw" title="">Work</a>
+                            </li>
+                            <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);">
+                                <a href="/agency" data-hover="agency" class="draw" title="">Agency</a>
+                            </li>
+                            <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);">
+                                <a href="/contact" data-hover="contact" class="draw" title="">Contact</a>
+                            </li>
+                            <li style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, -80);">
+                                <a href="/blog" data-hover="blog" class="draw" title="">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <article class="map-icon" style="opacity: 0;">
+                        Get in touch<br>
+                        <a href="mailto:info@trionndesign.com">info@trionndesign.com</a>
+                    </article>
+                    <div class="social">
+                        <a href="https://www.facebook.com/trionndesignagency/" target="_blank" title="Facebook"
+                           class="facebook wow fadeInUp" data-wow-delay="0.1s">
+                            <svg width="28px" height="28px" role="img" class="facebook-svg">
+                                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="http://www.linkedin.com/company/2715714" target="_blank" class="linkedin wow fadeInUp"
+                           data-wow-delay="0.2s" title="Linkedin">
+                            <svg width="28px" height="28px" role="img" class="linkedin-svg">
+                                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/trionndesign/" target="_blank"
+                           class="instagram wow fadeInDown" data-wow-delay="0.3s" title="Instagram">
+                            <svg width="28px" height="28px" role="img" class="instagram-svg">
+                                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/trionn_design" target="_blank" class="twitter wow fadeInUp"
+                           data-wow-delay="0.4s" title="Twitter">
+                            <svg width="28px" height="28px" role="img" class="twitter-svg">
+                                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- ngView:  -->
+    <section id="ng-container" class="clearfix">
+        <div class="landing clearfix" id="landing">
+            <div class="landing-wrapper" style="height: 976px;">
+                <div class="lion">
+                    <div class="lion" id="l_svg">
+                        <!--<img src="./images/svg/lion.svg" alt="lion"/>-->
+                    </div>
+                    <div class="landing-slogan">
+                        <div class="landing-slogan-wrapper">
+                            <h2 class="wow fadeInUpSmall" style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">
+                                Creative &amp; innovative <br>digital agency</h2>
+                            <a href="/work/design" title="" class="wow fadeInUpSmall" data-wow-delay="0.5s"
+                               style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">Work</a>
+                        </div>
+                    </div>
+                    <div class="mouse-icon">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home clearfix" id="home" style="height: 436px;">
+            <div class="home-wrapper">
+                <div class="tag-line" style="height: 436px;">
+                    We were
+                    <span class="tag-line-bold">born</span>
+                    <span class="tag-line-red" id="creativeId">
+                    <img src="./images/svg/creative.svg" alt="creative"/>
+			</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tagline clearfix">
+            <div class="tagline-wrapper" style="height: 976px;">
+                <h3 class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">We create
+                    outstanding UI/UX, branding
+                    <span>web design &amp; development</span>
+                    solutions for startups &amp; companies.</h3>
+            </div>
+        </div>
+
+        <div class="featured aniborder" id="featured">
+
+            <div class="container clearfix">
+
+                <div class="container-small clearfix">
+
+                    <div class="block-title draw" data-class="btcustom" ng-class="{feHovClass: fhover}">
+                        <div class="title">Featured</div>
+                        <p>Our clients really <br>value our work</p>
+                    </div>
+                </div>
+
+                <ul>
+                    <li class="homepage-project1" ng-mouseenter="feHovClass(1)" ng-mouseleave="feHovClass(0)">
+                        <a href="/work/development/wedding" title="">
+                            <div class="img-clone"></div>
+                            <div class="img"></div>
+                            <div class="container-medium clearfix">
+                                <div class="featured-slide-content">
+                                    <div class="container-small clearfix">
+                                        <h3>Wedding</h3>
+                                        <p>Beautiful luxury weddings planned with passion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="container-medium featured-2cols">
+                    <ul>
+                        <li class="wow fadeInUpSmall homepage-project2" data-wow-delay="0.2s">
+                            <a href="/work/development/capelo" title="">
+                                <div class="img-clone"></div>
+                                <div class="img"></div>
+                                <div class="featured-slide-content">
+                                    <div class="container-small clearfix">
+                                        <h3>Capelo</h3>
+                                        <p>Online luxury fashion destination</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="homepage-project3 wow fadeInUpSmall" data-wow-delay="0.3s">
+                            <a href="/work/development/my-designer-wardrobe" title="">
+                                <div class="img-clone"></div>
+                                <div class="img"></div>
+                                <div class="featured-slide-content">
+                                    <div class="container-small clearfix">
+                                        <h3>MDW</h3>
+                                        <p>Online shopping destination <br>for women</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="agency aniborder" id="agency">
+            <div class="container clearfix">
+                <div class="container-medium clearfix">
+                    <div class="agency-tag ">
+                        <h2 class="wow fadeInUpSmall">We combine <br>design &amp; development</h2>
+                        <div class="block-title draw wow fadeIn" data-wow-delay="0.4s" data-class="btcustom">
+                            <div class="title">Agency</div>
+                            <p>An award winning design agency</p>
+                        </div>
+                    </div>
+                    <div class="agency-exp-awards wow fadeIn">
+                        <div class="block-title wow fadeIn" data-class="btcustom">
+                            <div class="title">Awards</div>
+                            <article>
+                                <div class="maskNumber">
+                                    <div class="tn_counter fifty" data-counter="50" style="height: 121px;"
+                                         data-height="121">
+                                        <ul data-aheight="605">
+                                            <li>0<br>1<br>2<br>3<br>4<br>5<br></li>
+                                        </ul>
+                                        <ul data-aheight="1210">
+                                            <li>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br></li>
+                                        </ul>
+                                        <span>+</span></div>
+                                </div>
+                                We won many awards for our <br class="br">creative works.
+                            </article>
+                        </div>
+                        <div class="block-title wow fadeIn">
+                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                                <div class="bx-viewport" aria-live="polite"
+                                     style="width: 100%; overflow: hidden; position: relative; height: 260px;">
+                                    <ul class="awards-slider" style="width: auto; position: relative;">
+                                        <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                            aria-hidden="true">
+                                            <div class="title">Awwwards</div>
+                                            <article><img src="./images/awwards-logo.png"
+                                                          alt="Won honorable awards from Awwward's"><br>Honorable
+                                                mention
+                                            </article>
+                                        </li>
+                                        <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 50; display: list-item;"
+                                            aria-hidden="false">
+                                            <div class="title">A'Design</div>
+                                            <article><img src="./images/adesign-logo.png"
+                                                          alt="Won silver trophy from Adesign awards"><br>Silver Trophy
+                                            </article>
+                                        </li>
+                                        <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                            aria-hidden="true">
+                                            <div class="title">CSS Design</div>
+                                            <article><img src="./images/cssdesign-logo.png"
+                                                          alt="Won site of the day awards from CSS Design"><br>Site of
+                                                the day
+                                            </article>
+                                        </li>
+                                        <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                            aria-hidden="true">
+                                            <div class="title">Web guru</div>
+                                            <article><img src="./images/guru-logo.png"
+                                                          alt="Won Guru of the day awards from Web Guru Awards"><br>Guru
+                                                of the day
+                                            </article>
+                                        </li>
+                                        <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                            aria-hidden="true">
+                                            <div class="title">D.Nominees</div>
+                                            <article><img src="./images/dn-logo.png"
+                                                          alt="Won site of the day awards from Design Nominees"><br>Site
+                                                of the day
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-agency wow fadeIn" data-wow-delay="0.2s">
+                        <p><strong>Trionn Design is one of India's leading and trusted outsource web design and
+                            development agencies located in Rajkot, Gujarat.</strong></p>
+                        <p>Founded in September 2012.</p>
+                        <p>We provide custom and best web outsourcing services to startups and companies.</p>
+                        <a href="/agency" class="more">
+                            <img src="./images/svg/arrow.svg" alt="readmore">
+                        </a>
+                    </div>
+                    <div class="agency-video desktop-hide wow fadeInUpSmall animated">
+                        <a ng-click="openVideo($event)" data-href="Ekgdy3RRoWc" href="javascript:void(0);"
+                           title="Watch Trionn Design's explainer video">
+                            <img id="video-poster-play" src="./images/svg/play.svg" alt="Play video">
+                            <img src="./images/video.jpg" alt="Trionn Design explainer video">
+                        </a>
+                    </div>
+                    <div class="agency-founder wow fadeIn td-hx" data-wow-delay="0.3s" data-class="btcustom">
+                        <div class="block-title draw">
+                            <div class="title">Sunny <br> Rathod</div>
+                            <p>Founder &amp; CEO</p>
+                        </div>
+                        <a href="/agency" title="">
+                            <div class="img tdhxe" style="transform: matrix(1, 0, 0, 1, 0, 100);"></div>
+                        </a>
+                    </div>
+                    <div class="agency-video mobile-hide wow fadeInUpSmall">
+                        <a ng-click="openVideo($event)" data-href="Ekgdy3RRoWc" href="javascript:void(0);"
+                           title="Watch Trionn Design's explainer video">
+                            <img id="video-poster-play" src="./images/svg/play.svg" alt="Play video">
+                            <img src="./images/video.jpg" alt="Trionn Design explainer video">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="career aniborder" id="career">
+
+            <div class="container">
+
+                <h2 class="wow fadeInUpSmall">Do you want to be a lion? <br>Join Trionn today!</h2>
+
+                <div class="container-small clearfix">
+                    <div class="block-title draw" data-class="btcustom">
+                        <div class="title">Career</div>
+                        <p>Do you want to join Trionn?</p>
+                    </div>
+                </div>
+
+                <div class="container-medium clearfix">
+                    <div class="career-withus">
+                        <h3>Do you possess creative &amp; <br>innovative thought processes?</h3>
+                        <a href="mailto:hr@trionndesign.com" class="apply" title="">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="bealion wow fadeInUpSmall">
+                    <img src="./images/svg/lionsiluette.svg" xlink:href="./images/svg/creativeBg.jpg">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="start-project aniborder" id="start-project">
+            <div class="container clearfix">
+                <div class="container-small clearfix">
+                    <h2 class="wow fadeInUpSmall">Are you looking for real talent for <br>your dream projects?</h2>
+                    <div class="block-title draw wow fadeIn" data-wow-delay="0.3s" data-class="btcustom">
+                        <div class="title">Inquire</div>
+                        <p>We will respond to you within 24 hours</p>
+                    </div>
+
+                    <div class="start-project-block wow fadeIn" ng-mouseenter="launch()" ng-mouseleave="launchFinish()">
+                        <div class="launch"></div>
+                        <h3>Do you have a <br>project in mind?</h3>
+                        <a href="/start-a-project" title="">Let's start your project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="openVideo" ng-show="viShow" class="ng-hide">
+            <a class="close" ng-click="gitClosePopup()" href="javascript:void(0);" title="Close"></a>
+            <div class="content">
+                <div class="content" ng-bind-html="viFrame"></div>
+            </div>
+        </div>
+    </section>
+    <div class="contact" id="contact" ng-show="!gitv">
+        <div class="container clearfix">
+            <div class="container-medium clearfix wow fadeInUpSmall">
+                <h4>Quick contact</h4>
+                <p>We can give you a fast response via <br>email, phone call or skype.<span
+                        class="line bottom-line"></span></p>
+            </div>
+            <div class="container-small clearfix wow fadeInUpSmall">
+                <ul>
+                    <li><a href="mailto:info@trionndesign.com" class="icon inquire-icon" title="">
+                        <svg class="inquire-icon-svg" width="132px" height="132px" role="img">
+                            <use xlink:href="./images/svg_symbols.svg#inquire-icon"></use>
+                        </svg>
+                        For business inquiries<span>info@trionndesign.com</span></a></li>
+                    <li><a href="tel:+91-9824182099" class="icon mobile-icon" title="">
+                        <svg class="mobile-icon-svg" width="132px" height="132px" role="img">
+                            <use xlink:href="./images/svg_symbols.svg#mobile-icon"></use>
+                        </svg>
+                        Call us on<span>+91 98241 82099</span></a></li>
+                    <li><a href="skype:sunny.trinity?add" class="icon chat-icon" title="">
+                        <svg width="132px" height="132px" class="chat-icon-svg" role="img">
+                            <use xlink:href="./images/svg_symbols.svg#chat-icon"></use>
+                        </svg>
+                        Let's Skype<span>sunny.trinity</span></a></li>
+                </ul>
+                <div class="social">
+                    <a href="https://www.facebook.com/trionndesignagency/" target="_blank" class="facebook wow fadeInUp"
+                       data-wow-delay="0.1s" title="Facebook">
+                        <svg width="28px" height="28px" role="img" class="facebook-svg">
+                            <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="http://www.linkedin.com/company/2715714" target="_blank" class="linkedin wow fadeInUp"
+                       data-wow-delay="0.2s" title="LinkedIn">
+                        <svg width="28px" height="28px" role="img" class="linkedin-svg">
+                            <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/trionndesign/" target="_blank" class="instagram wow fadeInDown"
+                       data-wow-delay="0.3s" title="Instagram">
+                        <svg width="28px" height="28px" role="img" class="instagram-svg">
+                            <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/trionn_design" target="_blank" class="twitter wow fadeInUp"
+                       data-wow-delay="0.4s" title="Twitter">
+                        <svg width="28px" height="28px" role="img" class="twitter-svg">
+                            <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer ng-show="!gitv">
+        <div class="container">
+            <a href="/" title="Trionn Design">
+                <svg height="85px" width="90px" role="img">
+                    <svg class="tdfl1" height="85px" width="90px" role="img">
+                        <use xlink:href="//images/svg_symbols.svg#td-l1"></use>
+                    </svg>
+                    <svg class="tdfl2" height="85px" width="90px" role="img">
+                        <use xlink:href="//images/svg_symbols.svg#td-l2"></use>
+                    </svg>
+                    <svg class="tdfl3" height="85px" width="90px" role="img">
+                        <use xlink:href="//images/svg_symbols.svg#td-l3"></use>
+                    </svg>
+                </svg>
+            </a>
+            <span>© 2017 Trionn Design</span>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
