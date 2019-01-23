@@ -7,14 +7,14 @@ $color_gray_darkest: lighten($color_black, 20%);
 $color_img_hover: lighten($primary_color, 20%);
 
 $color_2: #b3b3b3;
-$color_4: #72706c;
+$color_4: #6c6f72;
 $color_6: #d4e7f9;
-$color_7: #b1ada5;
+$color_7: #a5abb1;
 $color_8: rgba(255, 255, 255, .9);
-$color_11: #cac8c2;
-$color_12: #abacae;
-$color_13: #a7a49e;
-$color_14: #aaa292;
+$color_11: #c2c6ca;
+$color_12: #abadae;
+$color_13: #9ea3a7;
+$color_14: #929faa;
 $color_16: #4c4c4c;
 $color_17: #585858;
 
@@ -24,9 +24,9 @@ $font_family_3: 'SimploW00-Black';
 $font_family_4: 'Montserrat', sans-serif;
 
 $border_color_1: lighten($primary_color, 10%);
-$border_color_2: #e0dedb;
+$border_color_2: #dbdee0;
 $border_color_3: #c8c7c7;
-$border_color_4: #f28a6a;
+$border_color_4: #234463;
 
 $border_top_color_1: #d4e7f9;
 $border_top_color_2: $border_color_1;
@@ -466,38 +466,39 @@ $border_left_color_2: $border_color_1;
   }
 }
 
-.agency-design {
+.agency-item {
   ul {
     li {
       font-weight: 500;
       line-height: 28px;
-    }
-    position: relative;
-    padding: 0 0 0 30px;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 12px;
-      height: 3px;
-      width: 15px;
-      background: #f9edd4;
+      position: relative;
+      padding: 0 0 0 30px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        height: 3px;
+        width: 15px;
+        background: $color_6;
+      }
     }
   }
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   float: left;
   width: 50%;
   background: $primary_color;
-  padding: 5.52em;
+  padding: 5em;
   color: $color_6;
-  margin: -140px 0 0 0;
   position: relative;
+
   &:after {
-    content: "1.";
+    content: "";
     position: absolute;
     bottom: 20px;
-    right: 50px;
+    right: 40px;
     font-family: $font_family_3;
     font-size: 5.556em;
     color: $color_6;
@@ -510,94 +511,48 @@ $border_left_color_2: $border_color_1;
   }
 }
 
-.agency-development {
-  ul {
-    li {
-      font-weight: 500;
-      line-height: 28px;
-    }
-    position: relative;
-    padding: 0 0 0 30px;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 12px;
-      height: 3px;
-      width: 15px;
-      background: #f9edd4;
-    }
-  }
-  box-sizing: border-box;
-
-  float: left;
-  width: 50%;
-  background: #333;
-  padding: 5.52em;
-  color: $color_6;
-  position: relative;
-  z-index: 1;
+.agency-item-1 {
   &:after {
-    content: "2.";
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-    font-family: $font_family_3;
-    font-size: 5.556em;
-    color: $color_6;
-    opacity: .1;
-    line-height: initial;
-  }
-  h4 {
-    font-size: 1.556em;
-    margin: 0 0 20px 0;
+    content: "1.";
   }
 }
 
-.agency-video-production {
-  ul {
-    li {
-      font-weight: 500;
-      line-height: 28px;
-    }
-    position: relative;
-    padding: 0 0 0 30px;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 12px;
-      height: 3px;
-      width: 15px;
-      background: #f9edd4;
-      background: #ccc;
-    }
-  }
-  box-sizing: border-box;
+.agency-item-2 {
+  background: $color_gray_darkest;
+  z-index: 1;
 
-  float: left;
-  width: calc(50% + 3px);
-  background: #fff;
-  padding: 5.52em;
+  &:after {
+    content: "2.";
+    opacity: .1;
+  }
+}
+
+.agency-item-3 {
+  background: $color_white;
   color: $color_gray_darkest;
-  border: 3px solid #e0dedb;
-  margin: -143px 0 0 0;
-  position: relative;
+  border: 3px solid $border_color_2;
   z-index: 0;
   &:after {
     content: "3.";
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-    font-family: $font_family_3;
-    font-size: 5.556em;
     color: $color_gray_darkest;
     opacity: .1;
-    line-height: initial;
   }
-  h4 {
-    font-size: 1.556em;
-    margin: 0 0 20px 0;
+}
+
+.agency-item-4 {
+  ul {
+    li {
+      &:after {
+        background-color: $color_gray_darkest;
+      }
+    }
+  }
+  background: $color_6;
+  color: $color_gray_darkest;
+  &:after {
+    content: "4.";
+    color: $color_gray_darkest;
+    opacity: .1;
   }
 }
 
@@ -713,7 +668,7 @@ $border_left_color_2: $border_color_1;
     .bx-pager-item {
       display: inline-block;
       a {
-        background: #f29277;
+        background: $color_6;
         width: 10px;
         height: 10px;
         border-radius: 12px;
@@ -1192,37 +1147,37 @@ $border_left_color_2: $border_color_1;
   float: left;
   width: 100%;
   .rs1 {
-    background: $color_img_hover url(./images/heros/bankim.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/bankim.jpg) no-repeat;
   }
   .rs2 {
-    background: $color_img_hover url(./images/heros/prabhat.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/prabhat.jpg) no-repeat;
   }
   .rs3 {
-    background: $color_img_hover url(./images/heros/gaurav.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/gaurav.jpg) no-repeat;
   }
   .rs4 {
-    background: $color_img_hover url(./images/heros/nidhi.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/nidhi.jpg) no-repeat;
   }
   .rs5 {
-    background: $color_img_hover url(./images/heros/viral.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/viral.jpg) no-repeat;
   }
   .rs6 {
-    background: $color_img_hover url(./images/heros/siddharth.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/siddharth.jpg) no-repeat;
   }
   .rs7 {
-    background: $color_img_hover url(./images/heros/nilesh.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/nilesh.jpg) no-repeat;
   }
   .rs8 {
-    background: $color_img_hover url(./images/heros/gujarati.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/gujarati.jpg) no-repeat;
   }
   .rs9 {
-    background: $color_img_hover url(./images/heros/devang.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/devang.jpg) no-repeat;
   }
   .rs10 {
-    background: $color_img_hover url(./images/heros/himanshu.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/himanshu.jpg) no-repeat;
   }
   .no0 {
-    background: $color_img_hover url(./images/heros/no-img.jpg) no-repeat;
+    background: $color_img_hover url(./images/gallery/no-img.jpg) no-repeat;
   }
 }
 
@@ -1541,23 +1496,26 @@ $border_left_color_2: $border_color_1;
   color: $color_6;
   text-align: center;
   vertical-align: middle;
-  #map-bubble {
-    .tdcl1 {
-      path {
-        fill: #f3a388;
-      }
+
+  &_icon {
+    position: relative;
+    display: block;
+
+    &_location {
+      fill: $color_white;
+      width: 88px;
     }
-    .tdcl2 {
-      path {
-        fill: #f9e7ce;
-      }
-    }
-    .tdcl3 {
-      path {
-        fill: #f9edd4;
-      }
+
+    &_logo {
+      position: absolute;
+      top: 25px;
+      left: calc(50% - 44px);
+      fill: $primary_color;
+      width: 88px;
+      height: 57px;
     }
   }
+
   h3 {
     font-size: 1.556em;
     margin: 0 0 30px 0;
@@ -1593,7 +1551,7 @@ $border_left_color_2: $border_color_1;
     padding: 15px;
     box-shadow: none;
 
-    border: 3px solid #e0dedb;
+    border: 3px solid $border_color_2;
     box-sizing: border-box;
 
   }
@@ -1611,7 +1569,7 @@ $border_left_color_2: $border_color_1;
     padding: 15px;
     box-shadow: none;
 
-    border: 3px solid #e0dedb;
+    border: 3px solid $border_color_2;
     box-sizing: border-box;
 
     min-height: 200px;
@@ -1619,15 +1577,16 @@ $border_left_color_2: $border_color_1;
     resize: none;
 
   }
-  input[type="submit"] {
+  button[type="submit"] {
     font-weight: 400;
     outline: none;
     outline-width: 0;
     transition: all .5s ease;
+    position: relative;
 
     font-size: 1.556em;
     border: 0;
-    background: #333 url(./images/arrow2.svg) calc(100% - 30px) center no-repeat;
+    background: $color_gray_darkest;
     margin: 0 auto;
     padding: 24px 120px 24px 30px;
     color: $color_6;
@@ -1636,10 +1595,26 @@ $border_left_color_2: $border_color_1;
     min-width: 304px;
     text-align: left;
 
+    &:after {
+      transition: all 0.8s ease 0s;
+      position: absolute;
+      content: "";
+      right: 30px;
+      top: 20px;
+      width: 45px;
+      height: 40px;
+      -webkit-mask: url(images/arrow.svg) no-repeat 100%;
+      mask: url(images/arrow.svg) no-repeat 100%;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $color_6;
+    }
+
     &:hover {
-      background: $primary_color url(./images/arrow2.svg) calc(100% - 20px) center no-repeat;
-      padding: 24px 120px 24px 30px;
-      background-size: auto 25px;
+      background: $primary_color;
+      &:after {
+        right: 18px;
+      }
     }
   }
   ul {
@@ -2701,7 +2676,7 @@ nav {
   box-sizing: border-box;
   transition: all .5s ease;
   background: $color_gray_darkest;
-  padding: 7.111em;
+  padding: 6.5em;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -3884,7 +3859,11 @@ nav {
   position: absolute;
   width: 110px;
   height: 110px;
-  background: url(./images/rocket_new.svg) center no-repeat;
+  -webkit-mask: url(./images/svg/rocket_new.svg) no-repeat 100%;
+  mask: url(./images/svg/rocket_new.svg) no-repeat 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: $color_6;
   transform: matrix(.69465837, -.7193398, .7193398, .69465837, 644, -253) rotate(-10deg);
 }
 
@@ -4172,13 +4151,15 @@ footer {
   }
 }
 
-.contact-page-india {
+.contact-page-minsk {
   float: left;
   width: 100%;
   text-align: center;
-  margin: 0 0 -7px 0;
-  background: url(./images/india.png) 52% center no-repeat;
+  margin: 0;
+  background: url(./images/minsk.jpg) 52% center no-repeat;
   height: 142px;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 .contact-form.project-form {
@@ -6401,13 +6382,13 @@ option {
       padding-left: 4.5rem;
     }
   }
-  .agency-design {
+  .agency-item-1 {
     padding: 4.5rem;
   }
-  .agency-development {
+  .agency-item-2 {
     padding: 4.5rem;
   }
-  .agency-video-production {
+  .agency-item-3 {
     padding: 4.5rem;
   }
   .office-location {
@@ -7321,18 +7302,12 @@ option {
     margin: 0;
     width: 100%;
   }
-  .agency-design {
+  .agency-item {
     margin: 0;
     width: 100%;
+  }
+  .agency-item-1 {
     margin-top: -100px;
-  }
-  .agency-development {
-    margin: 0;
-    width: 100%;
-  }
-  .agency-video-production {
-    margin: 0;
-    width: 100%;
   }
   .agency-design-dev {
     .agency-tag {
@@ -7701,7 +7676,7 @@ option {
       display: inline-block;
     }
   }
-  .contact-page-india {
+  .contact-page-minsk {
     margin-left: 1.5rem;
     width: calc(100% - 3rem);
     background-position: 45% center;
@@ -8490,21 +8465,7 @@ option {
       font-size: 1.2em;
     }
   }
-  .agency-design {
-    ul {
-      li {
-        font-size: 1.2em;
-      }
-    }
-  }
-  .agency-development {
-    ul {
-      li {
-        font-size: 1.2em;
-      }
-    }
-  }
-  .agency-video-production {
+  .agency-item {
     ul {
       li {
         font-size: 1.2em;
@@ -8648,13 +8609,13 @@ option {
       margin-bottom: 3em;
     }
   }
-  .agency-design {
+  .agency-item-1 {
     padding: 4rem 2rem;
   }
-  .agency-development {
+  .agency-item-2 {
     padding: 4rem 2rem;
   }
-  .agency-video-production {
+  .agency-item-3 {
     padding: 4rem 2rem;
   }
   .office-location {
@@ -9198,29 +9159,7 @@ option {
   .award-adesign {
     height: 357px;
   }
-  .agency-video-production {
-    &::after {
-      right: 10px;
-      bottom: 0;
-    }
-    ul {
-      li {
-        line-height: 24px;
-      }
-    }
-  }
-  .agency-development {
-    &::after {
-      right: 10px;
-      bottom: 0;
-    }
-    ul {
-      li {
-        line-height: 24px;
-      }
-    }
-  }
-  .agency-design {
+  .agency-item {
     &::after {
       right: 10px;
       bottom: 0;
@@ -9373,7 +9312,7 @@ option {
     }
   }
   .contact-form-wrapper {
-    input[type="submit"] {
+    button[type="submit"] {
       width: 100%;
       min-width: inherit;
       box-sizing: border-box;
@@ -9980,7 +9919,7 @@ option {
     height: 240px;
   }
   .contact-form-wrapper {
-    input[type="submit"] {
+    button[type="submit"] {
       min-width: 100%;
     }
   }

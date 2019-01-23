@@ -1,0 +1,45 @@
+<section class="contact-form" id="contact-form">
+    <div class="container clearfix">
+        <div class="container-small clearfix">
+            <div class="contact-tag wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
+                <h2>We are excited that you want <br>to work with us.</h2>
+            </div>
+            <div class="block-title draw wow fadeIn" data-class="btcustom"
+                 style="visibility: visible; animation-name: fadeIn;">
+                <div class="title">Контактная <br>форма</div>
+                <p>Давайте сделаем нечто интересное вместе</p>
+            </div>
+            <div class="contact-form-wrapper wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <form method="post" name="c_form" action="" id="contactForm" onsubmit="return false;">
+                    <ul>
+                        <li>
+                            <label>Имя*</label><input type="text" required="" pattern=".{3,100}"
+                                                       placeholder="Ваше имя" name="name" id="name" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Компания</label><input type="text" placeholder="Ваша компания" name="company_name"
+                                                         id="company_name" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Email*</label><input type="text" required="" pattern=".{3,100}"
+                                                        placeholder="Ваш адрес email" name="email" id="email"
+                                                        autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Телефон</label><input type="text" name="phone"
+                                                       placeholder="Ваш номер телефона" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Запрос</label>
+                            <textarea placeholder="Немного деталей о Вашей идее" id="comments" name="comments"></textarea>
+                        </li>
+                        <li>
+                            <button type="submit">Отправить</button>
+                        </li>
+                    </ul>
+                    <div id="formMsg"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
