@@ -45,9 +45,10 @@ new Vue({
       const body = document.body;
       this.mainNavigation = !this.mainNavigation;
       this.mainNavigationStyle = this.mainNavigation
-        ? 'transform: matrix(1, 0, 0, 1, 0, 0);'
-        : 'transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);';
-      
+        ? 'transform: matrix(1, 0, 0, 1, 0, 0); transition:  all .5s ease;'
+        : 'transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);' +
+		  'transition:  all .5s ease;';
+
       if (this.mainNavigation) {
         body.classList.add('navigation-visible');
       } else {
@@ -59,3 +60,65 @@ new Vue({
     },
   },
 });
+//
+// new Vue({
+// 	el: '.header-right',
+// 	data: {
+// 		pageScroll: 0,
+// 		mainNavigation: false,
+// 		mainNavigationStyle: '',
+// 		showLanding: true,
+// 	},
+// 	mounted() {
+// 		document.removeEventListener('scroll', this.handlePageScroll);
+// 		document.addEventListener('scroll', this.handlePageScroll);
+// 	},
+// 	watch: {
+// 		pageScroll(val) {
+// 			if (val > window.outerHeight) {
+// 				this.showLanding = false;
+// 			} else {
+// 				this.showLanding = true;
+// 			}
+// 		},
+// 	},
+// 	methods: {
+// 		handleMenu() {
+// 			const body = document.body;
+// 			this.mainNavigation = !this.mainNavigation;
+// 			this.mainNavigationStyle = this.mainNavigation
+// 				? 'transform: matrix(1, 0, 0, 1, 0, 0);'
+// 				: 'transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);';
+//
+// 			if (this.mainNavigation) {
+// 				body.classList.add('navigation-visible');
+// 			} else {
+// 				body.classList.remove('navigation-visible');
+// 			}
+// 		},
+// 		handlePageScroll(e) {
+// 			this.pageScroll = e.pageY;
+// 		},
+// 	},
+// });
+
+// // global menu
+// if ($('#blog-detail .blogs-photo').length > 0) {
+// 	if (this.pageYOffset <= $('#blog-detail .blogs-photo').height()) {
+// 		$('.header-right').removeClass('ms-active');
+// 	} else {
+// 		$('.header-right').addClass('ms-active');
+// 	}
+// } else {
+// 	$('.header-right').removeClass('ms-active');
+// }
+// if ($('#project-detail .project-photo').length > 0) {
+// 	if (this.pageYOffset <= $('#project-detail .project-photo').height()) {
+// 		$('.header-right').removeClass('ms-active');
+// 	} else {
+// 		$('.header-right').addClass('ms-active');
+// 	}
+// } else {
+// 	$('.header-right').removeClass('ms-active');
+// }
+// // global menu

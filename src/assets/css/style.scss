@@ -493,6 +493,7 @@ $border_left_color_2: $border_color_1;
   padding: 5em;
   color: $color_6;
   position: relative;
+  transition: all .5s ease;
 
   &:after {
     content: "";
@@ -509,6 +510,10 @@ $border_left_color_2: $border_color_1;
     font-size: 1.556em;
     margin: 0 0 20px 0;
   }
+
+  &:hover {
+    background-color: lighten($primary_color, 20%);
+  }
 }
 
 .agency-item-1 {
@@ -519,11 +524,13 @@ $border_left_color_2: $border_color_1;
 
 .agency-item-2 {
   background: $color_gray_darkest;
-  z-index: 1;
 
   &:after {
     content: "2.";
     opacity: .1;
+  }
+  &:hover {
+    background-color: lighten($color_gray_darkest, 20%);
   }
 }
 
@@ -531,11 +538,14 @@ $border_left_color_2: $border_color_1;
   background: $color_white;
   color: $color_gray_darkest;
   border: 3px solid $border_color_2;
-  z-index: 0;
+
   &:after {
     content: "3.";
     color: $color_gray_darkest;
     opacity: .1;
+  }
+  &:hover {
+    background-color: darken($color_white, 10%);
   }
 }
 
@@ -553,6 +563,9 @@ $border_left_color_2: $border_color_1;
     content: "4.";
     color: $color_gray_darkest;
     opacity: .1;
+  }
+  &:hover {
+    background-color: lighten($color_6, 20%);
   }
 }
 
