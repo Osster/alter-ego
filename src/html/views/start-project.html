@@ -1,0 +1,115 @@
+<%= _.template(require('./../includes/header.html'))([]) %>
+
+<section class="project-page contact-page start-a-project-page" id="project-page">
+    <div class="container clearfix">
+        <div class="container-small clearfix">
+            <div class="block-title bte wow draw fadeInDown btb-active" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="title">Начать проект</div>
+                <p>Давайте начнем сотрудничество</p>
+            </div>
+            <div class="project-tag wow fadeInUpSmall" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                <h2>Мы любим работать </br>над проектами, </br>которые вдохновляют.</h2>
+                <p>Мы готовы сделать нечто впечатляющее.</p>
+            </div>
+
+        </div>
+        <div class="container-medium clearfix trionn-heros-lion wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">
+            <img src="images/alter-circles.png" alt="Alter Ego" class="trionn-lion" width="100%">
+        </div>
+    </div>
+</section>
+<section class="contact-form project-form start-project-section wow fadeInUpSmall" id="project-form" style="visibility: hidden; animation-name: none;">
+    <div class="container clearfix">
+        <div class="container-small project-form-container clearfix">
+
+            <div class="project-form-wrapper contact-form-wrapper" data-wow-delay="0.4s">
+                <form method="post" name="c_form" action="" id="projectForm" ng-submit="projectSubmit()" onsubmit="return false;" class="ng-pristine ng-valid">
+                    <ul>
+                        <li>
+                            <label>Имя*</label><input type="text" pattern=".{3,100}" placeholder="Ваше имя" name="name" id="your_name" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Компания</label><input type="text" pattern=".{3,100}" placeholder="Название компании" name="company_name" id="company_name" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Email*</label><input type="text" pattern=".{3,100}" placeholder="Ваш email адрес" name="email" id="email" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Телефон</label><input type="text" pattern=".{3,20}" id="phone" name="phone" placeholder="Ваш номер телефона" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Сайт</label><input type="text" id="website" name="website" placeholder="Адрес Вашего сайта" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>Страна</label><input type="text" id="country" name="country" placeholder="Ваша страна" autocomplete="off">
+                        </li>
+
+                        <li class="full">
+                            <label>Тип проекта*</label>
+                            <ul class="start-project-type">
+                                <li class="">
+                                    <input type="checkbox" name="type_of_project[]" value="Web Design">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Событие</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Branding">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Контент</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Development">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Сайт</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Video">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Продвижение</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Other">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Другое</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>Бюджет*</label>
+                            <select name="budget" id="budget">
+                                <option value="">Выберите бюджет проекта</option>
+                                <option value="Less than 1000 USD">Менее $1000 USD</option>
+                                <option value="$1001 - $3000 USD">$1001 - $3000 USD</option>
+                                <option value="$3001 - $5000 USD">$3001 - $5000 USD</option>
+                                <option value="$5001 - $10000 USD">$5001 - $10000 USD</option>
+                                <option value="$10001 - $20000 USD">$10001 - $20000 USD</option>
+                                <option value="More than $20000 USD">Более $20000 USD</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Оцениваемая продолжительность работы*</label>
+                            <select name="timeframe" id="timeframe">
+                                <option value="">Каков дедлайн проекта?</option>
+                                <option value="Less then 1 month">Менее 1 месяца</option>
+                                <option value="2 Months">2 месяца </option>
+                                <option value="3 Months">3 месяца </option>
+                                <option value="6 Months">6 месяцев </option>
+                                <option value="Not Fixed">Нет фиксированного дедлайна</option>
+                            </select>
+                        </li>
+                        <li class="full">
+                            <label>Описание проекта</label>
+                            <textarea placeholder="Кратко опишите проект, цели, задачи и требования." id="aboutproject" name="aboutproject"></textarea>
+                        </li>
+                        <li class="full full-center">
+                            <button type="submit">Отправить</button>
+                        </li>
+                    </ul>
+                    <div id="formMsg"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html'))([]) %>

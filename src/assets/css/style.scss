@@ -1244,7 +1244,7 @@ $border_left_color_2: $border_color_1;
   .trionn-lion {
     float: right;
     width: 100%;
-    max-width: 767px;
+    max-width: 710px;
     margin: 0 0 -18px 0;
     position: relative;
     z-index: 1;
@@ -3517,6 +3517,17 @@ nav {
   }
 }
 
+.alter-img {
+  width: 50%;
+  height: 100%;
+  background-image: url('./images/alter-circles.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin-left: 100px;
+}
+
 #svglion {
   height: 80%;
   top: 10%;
@@ -4148,7 +4159,7 @@ footer {
   .trionn-lion {
     float: right;
     width: 100%;
-    max-width: 767px;
+    max-width: 710px;
     margin: 0 0 -18px 0;
     position: relative;
     z-index: 1;
