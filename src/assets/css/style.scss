@@ -89,6 +89,7 @@ $border_left_color_2: $border_color_1;
           line-height: 192px;
           font-size: 1.667em;
           color: $color_4;
+          text-transform: capitalize;
           &:hover {
             color: $primary_color;
             z-index: 2;
