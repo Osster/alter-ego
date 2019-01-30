@@ -12,36 +12,38 @@
 <div id="wrapper" class="wrapanim varWrapperClass">
   <header>
     <h1>
-      <a href="/" title="Альтер Эго Групп" class="td-logo">
-					<span class="band">
-            <img src="images/logo-100-white.png">
-					</span>
-      </a>
+        <a href="/" title="Альтер Эго Групп" class="td-logo">
+            <span class="band">
+                <svg>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/alterego-logo.svg#logo"></use>
+                </svg>
+            </span>
+        </a>
       <span>Альтер Эго Групп -<br> креативная команда<br> и богатый опыт.</span>
     </h1>
 
     <div class="header-right">
-      <a href="#" title="" class="start-project">Start a project</a>
+      <a href="/start-project.html" title="" class="start-project">Start a project</a>
       <a href="javascript:void(0)" title="Navigation" class="menu-icon" @click="handleMenu"><em>Меню</em><span></span></a>
     </div>
 
     <section class="main-navigation" :style="mainNavigationStyle">
       <div class="container clearfix">
         <div class="container-small clearfix">
+            <div class="demo">
+                <button v-on:click="shuffle">Перемешать</button>
+                <transition-group name="flip-list" tag="ul">
+                    <li v-for="itemcust in itemscust" v-bind:key="itemcust">
+                        {{ itemcust }}
+                    </li>
+                </transition-group>
+            </div>
           <nav>
-            <ul>
-              <li>
-                <a href="/event.html" class="draw" title="">Event</a>
-              </li>
-              <li>
-                <a href="/content.html" class="draw" title="">Content</a>
-              </li>
-              <li>
-                <a href="/digital.html" class="draw" title="">Digital</a>
-              </li>
-              <li>
-                <a href="/contact.html" class="draw" title="">Contact</a></li>
-            </ul>
+              <ul>
+                  <li v-for="item in items" :style="mainNavigationStyleLi">
+                        <a class="draw" :href="item.url">{{ item.name }}</a>
+                  </li>
+              </ul>
           </nav>
           <article class="map-icon">
             Мы на связи<br>
@@ -81,395 +83,459 @@
 
   <section id="ng-container" class="clearfix">
 
-    <section class="agency-page" id="agency-page">
-      <div class="container clearfix">
+<section class="agency-page" id="agency-page">
+    <div class="container clearfix">
         <div class="container-small clearfix">
-          <div class="block-title bte draw wow fadeInDown  btb-active" style="visibility: visible; animation-name: fadeInDown;">
-            <div class="title">Event & BTL</div>
-            <p>Незабываемые события любого масштаба</p>
-          </div>
-          <div class="agency-tag wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
-            <h2>Creative &amp; innovative<br> design agency.</h2>
-            <p>Where art enthusiasts &amp; tech freaks <br>connect via innovative ideas.</p>
-          </div>
+            <div class="block-title bte draw wow fadeInDown  btb-active" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="title">Event & BTL</div>
+                <p>Незабываемые события любого масштаба</p>
+            </div>
+            <div class="agency-tag wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
+                <h2>Creative &amp; innovative<br> design agency.</h2>
+                <p>Where art enthusiasts &amp; tech freaks <br>connect via innovative ideas.</p>
+            </div>
         </div>
-      </div>
-      <div class="container clearfix">
+    </div>
+    <div class="container clearfix">
         <div class="container-medium clearfix">
-          <div class="about-agency wow fadeInUpSmall" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUpSmall;">
-            <p><strong>Trionn Design is one of India's leading and trusted outsource web design and development agencies, located in Rajkot, Gujarat. </strong></p>
-            <p>Founded in September 2012, our agency creates Web Interfaces, Brands, IOS, Android application designs, game design and custom Web, Content management, e-commerce development.</p>
-            <p>We deliver creative, strategic and innovative solutions to help brands with new challenges while managing every touch-point.</p>
-          </div>
-          <div class="agency-statue wow fadeInUpSmall" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
-            <a href="blog/trionn-logo-brand-history" class="agency-history" title="">
-              <div class="title">History</div>
-              <p>
-                <svg height="95px" width="135px" role="img">
-                  <svg class="tdfl1" height="95px" width="135px" role="img"><use xlink:href="images/svg_symbols.svg#td-l1"></use></svg>
-                  <svg class="tdfl2" height="95px" width="135px" role="img"><use xlink:href="images/svg_symbols.svg#td-l2"></use></svg>
-                  <svg class="tdfl3" height="95px" width="135px" role="img"><use xlink:href="images/svg_symbols.svg#td-l3"></use></svg>
-                </svg>
-                <br>The history behind the Trionn name &amp; <br>the three heads lion brand</p>
-            </a>
-          </div>
+            <div class="about-agency wow fadeInUpSmall" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUpSmall;">
+                <p><strong>Trionn Design is one of India's leading and trusted outsource web design and development agencies, located in Rajkot, Gujarat. </strong></p>
+                <p>Founded in September 2012, our agency creates Web Interfaces, Brands, IOS, Android application designs, game design and custom Web, Content management, e-commerce development.</p>
+                <p>We deliver creative, strategic and innovative solutions to help brands with new challenges while managing every touch-point.</p>
+            </div>
+            <div class="agency-statue wow fadeInUpSmall" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+                <a href="blog/trionn-logo-brand-history" class="agency-history" title="">
+                    <div class="title">History</div>
+                    <p>
+                        <svg style="fill: #234463; width: 100px;">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/alterego-logo.svg#logo"></use>
+                        </svg>
+                        <br>The history behind the Trionn name &amp; <br>the three heads lion brand
+                    </p>
+                </a>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="agency-design-dev">
-      <div class="container clearfix">
+<section class="agency-design-dev">
+    <div class="container clearfix">
         <div class="container-small clearfix">
-          <div class="agency-tag">
-            <h2 class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">We combine <br>design &amp; development</h2>
-          </div>
+            <div class="agency-tag">
+                <h2 class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">We combine <br>design &amp; development</h2>
+            </div>
         </div>
         <div class="container-small clearfix">
-          <div class="block-title black-title draw" data-class="btcustom">
-            <div class="title">Services</div>
-            <p>This is what we <br>love to do</p>
-          </div>
+            <div class="block-title black-title draw" data-class="btcustom">
+                <div class="title">Услуги</div>
+                <p>This is what we <br>love to do</p>
+            </div>
         </div>
-      </div>
-      <div class="container clearfix">
+    </div>
+    <div class="container clearfix">
         <div class="container-medium clearfix td-lx">
-          <div class="agency-design-dev-tag">
-            <div class="img tdlxe" style="transform: matrix(1, 0, 0, 1, 0, 50);"></div>
-            <h3 class="wow fadeIn" style="visibility: hidden; animation-name: none;">We are creative with our designs <br>&amp; logical in developments.</h3>
-          </div>
+            <div class="agency-design-dev-tag">
+                <div class="img tdlxe" style="transform: matrix(1, 0, 0, 1, 0, 50);"></div>
+                <h3 class="wow fadeIn" style="visibility: hidden; animation-name: none;">We are creative with our designs <br>&amp; logical in developments.</h3>
+            </div>
         </div>
-      </div>
-      <div class="container clearfix">
+    </div>
+    <div class="container clearfix">
         <div class="container-small clearfix">
-          <div class="agency-design wow fadeInUpSmall" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-            <h4>Designs</h4>
-            <ul>
-              <li>User interface and UX</li>
-              <li>Website and visual design</li>
-              <li>Branding and Identities</li>
-              <li>Creative promo sites</li>
-              <li>Mobile application</li>
-              <li>Mobile websites</li>
-              <li>Infographics</li>
-            </ul>
-          </div>
-          <div class="agency-development wow fadeInUpSmall" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-            <h4>Development</h4>
-            <ul>
-              <li>Wordpress CMS</li>
-              <li>HTML5, CSS3 and jQuery</li>
-              <li>Magento E-commerce</li>
-              <li>Angular js and node js</li>
-              <li>Responsive frontend</li>
-              <li>IOS application</li>
-              <li>Codeigniter</li>
-            </ul>
-          </div>
-          <div class="agency-video-production wow fadeInUpSmall" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-            <h4>Video Production</h4>
-            <ul>
-              <li>Cinematography</li>
-              <li>Prewedding Shoots</li>
-              <li>Wedding Shoots</li>
-              <li>Advertisements</li>
-              <li>Explainer Videos</li>
-            </ul>
-          </div>
+            <a href="/event-item-corporative.html">
+                <div class="agency-item agency-item-1 wow fadeInUpSmall" data-wow-delay="0.2s" style="margin: -140px 0 0 0; visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                    <h4>Корпоративные мероприятия</h4>
+                    <ul>
+                        <li>Корпоративные мероприятия</li>
+                        <li>Тимбилдинги</li>
+                        <li>Встречи, переговоры, презентации</li>
+                        <li>Конференции, форумы и конгрессы, семинары</li>
+                        <li>Выставки</li>
+                        <li>Юбилеи компаний</li>
+                        <li>Поощрительные поездки</li>
+                        <li>Программы лояльности</li>
+                        <li>Бизнес мероприятия</li>
+                        <li>Торговые события</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="/event-item-individual.html">
+                <div class="agency-item agency-item-2 wow fadeInUpSmall" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <h4>Частные мероприятия</h4>
+                    <ul>
+                        <li>Свадьбы</li>
+                        <li>Выпускные</li>
+                        <li>Розыгрыши</li>
+                        <li>Детские праздники</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="/event-item-mass.html">
+                <div class="agency-item agency-item-3 wow fadeInUpSmall" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+                    <h4>Массовые мероприятия</h4>
+                    <ul>
+                        <li>Фестивали</li>
+                        <li>Шоу</li>
+                        <li>Концерты</li>
+                    </ul>
+                </div>
+            </a>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="agency-clients">
-      <div class="container clearfix">
+<section class="agency-clients">
+    <div class="container clearfix">
         <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">Many popular brands &amp; sectors entrust<br> their company image in us!</h2>
         <div class="block-title wow fadeIn draw" data-wow-delay="0.2s" data-class="btcustom" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-          <div class="title">Clients</div>
-          <p>We love our clients &amp; <br>they really value us</p>
+            <div class="title">Клиенты</div>
+            <p>Мы любим наших клиентов </br>и они ценят нас</p>
         </div>
         <div class="container-medium clearfix">
-          <div class="line"></div>
-          <ul>
-            <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;"><span class="client10"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><span class="client7"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;"><span class="client8"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><span class="client11"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;"><span class="client6"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;"><span class="client9"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;"><span class="client1"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><span class="client12"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;"><span class="client3"></span></li>
-            <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><span class="client5"></span></li>
-          </ul>
+            <div class="line"></div>
+            <ul>
+                <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;"><span class="client10"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><span class="client7"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;"><span class="client8"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><span class="client11"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;"><span class="client6"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;"><span class="client9"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;"><span class="client1"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><span class="client12"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;"><span class="client3"></span></li>
+                <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><span class="client5"></span></li>
+            </ul>
 
-          <div class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">
-            <h3>What our clients saying :)</h3>
-            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 478px;"><ul class="testi-slider" style="width: auto; position: relative;">
+            <div class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">
+                <h3>Что наши клиенты говорят о нас :)</h3>
+                <div class="bx-wrapper" style="max-width: 100%;">
+                    <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 478px;">
+                        <ul class="testi-slider" style="width: auto; position: relative;">
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 50; display: block;" aria-hidden="false">
+                                <h5>Mobichat</h5>
+                                <p>Sunny and his award winning team are second to none when it comes to responsive web design. Their ability to take an idea and make it a work of art has always been a great experience. When you find companies like his you make sure to keep them close.</p>
+                                <div class="author">- Doug Petrie<span>Founder and CEO</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Mobaxis &amp; Adaxis</h5>
+                                <p>Trionn Design transformed our brand and online presence and took it to the next level. Their team is among the most professional web design and development firm I have worked with. We get compliments on both of our websites on a regular basis since they were designed with a modern yet timeless style. Our websites have given us an edge in a competitive digital marketing industry. We will continue to work with Trionn Design for years to come.</p>
+                                <div class="author">- Tyler Swenson<span>Managing Director</span></div>
+                            </li>
 
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Aadoo Innovations Ltd.</h5>
+                                <p>Really Happy with the work done by sunny &amp; his team, he was quite helpful and understood well what we needed. He was very patient even when we asked for multiple iteration and continued to do so until we were fully satisfied. We highly recommend sunny for designing work and will definitely use him again.</p>
+                                <div class="author">- Trupti Chaturvedi<span>Director</span></div>
+                            </li>
 
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Chamber of International Commerce</h5>
+                                <p>Trionn Design is both an expert in his field and a gentleman in communications. His team's contribution to the website development was enormous and unparalleled, even assisting with key aspects outside of the projects scope. I would highly recommend Trionn Design to any persons and/or company wishing to employ a contractor that is 100% honest, reliable and professional in all areas of its work - 5 stars.</p>
+                                <div class="author">- Jack Taylor<span>CEO</span></div>
+                            </li>
 
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Credible</h5>
+                                <p>The Trionn Design team is extremely reliable, professional and talented. It has been a great pleasure collaborating with them over many months.</p>
+                                <div class="author">- Stephen Dash <span>Founder &amp; CEO</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Meet &amp; Social</h5>
+                                <p>Trionn Design has done a great job in designing a site for our company. They were very understanding and receptive and always deliver work faster than anticipation.</p>
+                                <div class="author">- Jimmy T.<span>Co-Founder</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Vendep Oy</h5>
+                                <p>At the time you seek for the best result in any kind of design, from a simple web-site to a complex web application, you just tell Trionn "Please make something according to your own vision" and wait for a miracle with relieved anticipation knowing that this time there are ones of the best designers in world working on your case.</p>
+                                <div class="author">- Juri Oshujev<span>Project Manager</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Dvellup</h5>
+                                <p>Trionn Design is a real talent! They worked on a very tight schedule and delivered when they said they would. Theyr very creative and also very responsive to feedback. The job was very high pressure in terms of time and budget. Highly recommended.</p>
+                                <div class="author">- Mark Watson<span>Founder &amp; Director</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>Berkley</h5>
+                                <p>Sunny &amp; his team has been great! We tasked him with building out our corporate website with very little guidance and he knocked it out of the park. I would highly recommend him for any creative and website work. He is creative yet practical and extremely responsive. We went from first contact to finished website in 3 weeks. Again, I highly recommend him.</p>
+                                <div class="author">- Eric Berkley<span>President</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>ROI High</h5>
+                                <p>Perfect work, Sunny 7 his team is very helpful, doesn't nickel and dime you for every change you request, and is very dedicated to making sure you're happy with the design - A+, very recommended!</p>
+                                <div class="author">- Adi Friedman<span>President</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>NettiX Oy</h5>
+                                <p>Sunny is a true professional in web design. He has an eye for details and is eager for new challenges. Sunny can bring out spontanously new ideas to any project. He can really see web from users perspective and outcome of the project is usually a fine combination of great usability and design in wide area of businesses. Sunny is just a brilliant team player, whether it's work or play. I wouldn't hesitate working with Sunny again.</p>
+                                <div class="author">- Jouni Lehti<span>Development Manager</span></div>
+                            </li>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>3RConnect</h5>
+                                <p>Working with Trionn Design has been a great experience for us at 3RConnect. We worked on multiple products with different themes with very tight deadlines.  Sunny was very creative &amp; extremely professional in his approach. He worked diligently &amp; patiently to ensure that all the product designs were unique and that all our team members were satisfied with the end result. His eye for perfection down to the pixel is unparalleled causing many a developers to cringe when he reviewed the final product.  Sunny was also very committed to meeting the deadlines and, goes over and beyond to meet his commitments.  Sunny has been a pleasure to work with and is the first one that comes to mind when we have a new product idea.  We highly recommend choosing Trionn for your next project.</p>
+                                <div class="author">- Dolly Lakhani<span>Co-Founder</span></div>
+                            </li>
 
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 50; display: block;" aria-hidden="false">
-                <h5>Mobichat</h5>
-                <p>Sunny and his award winning team are second to none when it comes to responsive web design. Their ability to take an idea and make it a work of art has always been a great experience. When you find companies like his you make sure to keep them close.</p>
-                <div class="author">- Doug Petrie<span>Founder and CEO</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Mobaxis &amp; Adaxis</h5>
-                <p>Trionn Design transformed our brand and online presence and took it to the next level. Their team is among the most professional web design and development firm I have worked with. We get compliments on both of our websites on a regular basis since they were designed with a modern yet timeless style. Our websites have given us an edge in a competitive digital marketing industry. We will continue to work with Trionn Design for years to come.</p>
-                <div class="author">- Tyler Swenson<span>Managing Director</span></div>
-              </li>
-
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Aadoo Innovations Ltd.</h5>
-                <p>Really Happy with the work done by sunny &amp; his team, he was quite helpful and understood well what we needed. He was very patient even when we asked for multiple iteration and continued to do so until we were fully satisfied. We highly recommend sunny for designing work and will definitely use him again.</p>
-                <div class="author">- Trupti Chaturvedi<span>Director</span></div>
-              </li>
-
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Chamber of International Commerce</h5>
-                <p>Trionn Design is both an expert in his field and a gentleman in communications. His team's contribution to the website development was enormous and unparalleled, even assisting with key aspects outside of the projects scope. I would highly recommend Trionn Design to any persons and/or company wishing to employ a contractor that is 100% honest, reliable and professional in all areas of its work - 5 stars.</p>
-                <div class="author">- Jack Taylor<span>CEO</span></div>
-              </li>
-
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Credible</h5>
-                <p>The Trionn Design team is extremely reliable, professional and talented. It has been a great pleasure collaborating with them over many months.</p>
-                <div class="author">- Stephen Dash <span>Founder &amp; CEO</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Meet &amp; Social</h5>
-                <p>Trionn Design has done a great job in designing a site for our company. They were very understanding and receptive and always deliver work faster than anticipation.</p>
-                <div class="author">- Jimmy T.<span>Co-Founder</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Vendep Oy</h5>
-                <p>At the time you seek for the best result in any kind of design, from a simple web-site to a complex web application, you just tell Trionn "Please make something according to your own vision" and wait for a miracle with relieved anticipation knowing that this time there are ones of the best designers in world working on your case.</p>
-                <div class="author">- Juri Oshujev<span>Project Manager</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Dvellup</h5>
-                <p>Trionn Design is a real talent! They worked on a very tight schedule and delivered when they said they would. Theyr very creative and also very responsive to feedback. The job was very high pressure in terms of time and budget. Highly recommended.</p>
-                <div class="author">- Mark Watson<span>Founder &amp; Director</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>Berkley</h5>
-                <p>Sunny &amp; his team has been great! We tasked him with building out our corporate website with very little guidance and he knocked it out of the park. I would highly recommend him for any creative and website work. He is creative yet practical and extremely responsive. We went from first contact to finished website in 3 weeks. Again, I highly recommend him.</p>
-                <div class="author">- Eric Berkley<span>President</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>ROI High</h5>
-                <p>Perfect work, Sunny 7 his team is very helpful, doesn't nickel and dime you for every change you request, and is very dedicated to making sure you're happy with the design - A+, very recommended!</p>
-                <div class="author">- Adi Friedman<span>President</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>NettiX Oy</h5>
-                <p>Sunny is a true professional in web design. He has an eye for details and is eager for new challenges. Sunny can bring out spontanously new ideas to any project. He can really see web from users perspective and outcome of the project is usually a fine combination of great usability and design in wide area of businesses. Sunny is just a brilliant team player, whether it's work or play. I wouldn't hesitate working with Sunny again.</p>
-                <div class="author">- Jouni Lehti<span>Development Manager</span></div>
-              </li>
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>3RConnect</h5>
-                <p>Working with Trionn Design has been a great experience for us at 3RConnect. We worked on multiple products with different themes with very tight deadlines.  Sunny was very creative &amp; extremely professional in his approach. He worked diligently &amp; patiently to ensure that all the product designs were unique and that all our team members were satisfied with the end result. His eye for perfection down to the pixel is unparalleled causing many a developers to cringe when he reviewed the final product.  Sunny was also very committed to meeting the deadlines and, goes over and beyond to meet his commitments.  Sunny has been a pleasure to work with and is the first one that comes to mind when we have a new product idea.  We highly recommend choosing Trionn for your next project.</p>
-                <div class="author">- Dolly Lakhani<span>Co-Founder</span></div>
-              </li>
-
-              <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
-                <h5>NordicHug</h5>
-                <p>Great experience with Sunny and his company! Products have always been delivered on time and executed with very high quality. Sunny has acceeded our expectations and I would recommend Sunny and his company to anyone who is looking for a trustworthy partner and great results delivered on time.</p>
-                <div class="author">- Dmitry Genin<span>Co-Founder</span></div>
-              </li>
-            </ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div></div></div></div>
-          </div>
+                            <li style="float: none; list-style: outside none none; position: absolute; width: 845px; z-index: 0; display: none;" aria-hidden="true">
+                                <h5>NordicHug</h5>
+                                <p>Great experience with Sunny and his company! Products have always been delivered on time and executed with very high quality. Sunny has acceeded our expectations and I would recommend Sunny and his company to anyone who is looking for a trustworthy partner and great results delivered on time.</p>
+                                <div class="author">- Dmitry Genin<span>Co-Founder</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bx-controls bx-has-pager">
+                        <div class="bx-pager bx-default-pager">
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="0" class="bx-pager-link active">1</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="1" class="bx-pager-link">2</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="2" class="bx-pager-link">3</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="3" class="bx-pager-link">4</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="4" class="bx-pager-link">5</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="5" class="bx-pager-link">6</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="6" class="bx-pager-link">7</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="7" class="bx-pager-link">8</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="8" class="bx-pager-link">9</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="9" class="bx-pager-link">10</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="10" class="bx-pager-link">11</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="11" class="bx-pager-link">12</a>
+                            </div>
+                            <div class="bx-pager-item">
+                                <a href="" data-slide-index="12" class="bx-pager-link">13</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="agency-awards">
-      <div class="container clearfix">
+<section class="agency-awards">
+    <div class="container clearfix">
         <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">India's maximum award winning design <br>&amp; development agency</h2>
         <div class="block-title wow fadeIn draw" data-class="btcustom" style="visibility: hidden; animation-name: none;">
-          <div class="title">Awards</div>
-          <p>Our honors &amp; <br>awards</p>
+            <div class="title">Награды</div>
+            <p>Наши достижения <br>и награды</p>
         </div>
         <div class="container-medium clearfix">
-          <div class="award-left-col wow fadeIn" style="visibility: hidden; animation-name: none;">
-            <div class="award award-adesign">
-              <div class="award-wrapper">
-                <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 582px;"><ul class="bx-slider" style="width: 2215%; position: relative; transition-duration: 0s; transform: translate3d(-762px, 0px, 0px);"><li style="float: left; list-style: outside none none; position: relative; width: 762px;" class="bx-clone" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign2.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
-                  <li style="float: left; list-style: outside none none; position: relative; width: 762px;" aria-hidden="false"><img class="wow fadeIn" src="images/awards/adesign.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
-                  <li style="float: left; list-style: outside none none; position: relative; width: 762px;" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign2.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
-                  <li style="float: left; list-style: outside none none; position: relative; width: 762px;" class="bx-clone" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li></ul></div></div>
-              </div>
+            <div class="award-left-col wow fadeIn" style="visibility: hidden; animation-name: none;">
+                <div class="award award-adesign">
+                    <div class="award-wrapper">
+                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 582px;"><ul class="bx-slider" style="width: 2215%; position: relative; transition-duration: 0s; transform: translate3d(-762px, 0px, 0px);"><li style="float: left; list-style: outside none none; position: relative; width: 762px;" class="bx-clone" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign2.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
+                            <li style="float: left; list-style: outside none none; position: relative; width: 762px;" aria-hidden="false"><img class="wow fadeIn" src="images/awards/adesign.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
+                            <li style="float: left; list-style: outside none none; position: relative; width: 762px;" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign2.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li>
+                            <li style="float: left; list-style: outside none none; position: relative; width: 762px;" class="bx-clone" aria-hidden="true"><img class="wow fadeIn" src="images/awards/adesign.jpg" alt="Won silver trophy from Adesign awards" style="visibility: hidden; animation-name: none;"></li></ul></div></div>
+                    </div>
+                </div>
+                <div class="award award-cssreel wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+                </div>
             </div>
-            <div class="award award-cssreel wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+            <div class="award-right-col">
+                <div class="award award-awwwards wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                </div>
+                <div class="award award-cssdesign wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                </div>
+                <div class="award award-fiftyplus wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+                    <div class="award-wrapper">
+                        50<em>+</em>
+                        <span>Awards we won</span>
+                    </div>
+                </div>
+                <div class="award award-cssmoz wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                </div>
+                <div class="award award-webguru wow fadeIn" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
+                </div>
             </div>
-          </div>
-          <div class="award-right-col">
-            <div class="award award-awwwards wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-            </div>
-            <div class="award award-cssdesign wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-            </div>
-            <div class="award award-fiftyplus wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-              <div class="award-wrapper">
-                50<em>+</em>
-                <span>Awards we won</span>
-              </div>
-            </div>
-            <div class="award award-cssmoz wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-            </div>
-            <div class="award award-webguru wow fadeIn" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="agency-hero">
-      <div class="container clearfix">
+<section class="agency-hero">
+    <div class="container clearfix">
         <div class="container-small clearfix">
-          <div class="agency-tag">
-            <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">We are out of box <br>thinkers</h2>
-          </div>
+            <div class="agency-tag">
+                <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">Фотогалерея <br>наших мероприятий</h2>
+            </div>
         </div>
         <div class="container-small clearfix" data-class="btcustom">
-          <div class="block-title black-title wow draw fadeIn" style="visibility: hidden; animation-name: none;">
-            <div class="title">Team</div>
-            <p>We are rockstars</p>
-          </div>
+            <div class="block-title black-title wow draw fadeIn" style="visibility: hidden; animation-name: none;">
+                <div class="title">Team</div>
+                <p>We are rockstars</p>
+            </div>
         </div>
         <div class="container-medium clearfix td-ax">
-          <div class="agency-founder-poster">
-            <div class="img tdaxe" style="transform: matrix(1, 0, 0, 1, 0, 100);"></div>
-            <span class="lucky-number">99</span>
-            <a href="https://www.linkedin.com/in/sunnyrathod" target="_blank" class="linkedin wow fadeInUpSmall" data-wow-delay="0.2s" title="LinkedIn" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-              <svg width="28px" height="28px" role="img" class="linkedin-svg"><use xlink:href="images/svg_symbols.svg#linkedin-logo"></use></svg>
-            </a>
-            <div class="agency-founder-poster-wrapper  wow fadeIn" style="visibility: hidden; animation-name: none;">
-              <p>Today, nothing is possible without design. The future of the design field will always be green, but at the same time challenging and imaginary. This is because creativity never comes to an end; the only limit is the sky.</p>
-              <h3>Sunny Rathod</h3>
-              <i>- Founder &amp; CEO</i>
+            <div class="agency-founder-poster">
+                <div class="img tdaxe" style="transform: matrix(1, 0, 0, 1, 0, 100);"></div>
+                <span class="lucky-number">99</span>
+                <a href="https://www.linkedin.com/in/sunnyrathod" target="_blank" class="linkedin wow fadeInUpSmall" data-wow-delay="0.2s" title="LinkedIn" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                    <svg width="28px" height="28px" role="img" class="linkedin-svg"><use xlink:href="images/svg_symbols.svg#linkedin-logo"></use></svg>
+                </a>
+                <div class="agency-founder-poster-wrapper  wow fadeIn" style="visibility: hidden; animation-name: none;">
+                    <p>Today, nothing is possible without design. The future of the design field will always be green, but at the same time challenging and imaginary. This is because creativity never comes to an end; the only limit is the sky.</p>
+                    <h3>Sunny Rathod</h3>
+                    <i>- Founder &amp; CEO</i>
 
+                </div>
             </div>
-          </div>
         </div>
         <div class="agency-heros">
-          <div class="container-small clearfix">
-            <ul>
-              <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
-                <div class="img-clone rs1"></div>
-                <div class="img rs1"></div>
-                <div class="hero-name">Bankim</div>
-                <div class="hero-desig">- Sr. Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design heros">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-                <div class="img-clone rs2"></div>
-                <div class="img rs2"></div>
-                <div class="hero-name">Prabhat</div>
-                <div class="hero-desig">- Project Manager</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-                <div class="img-clone rs3"></div>
-                <div class="img rs3"></div>
-                <div class="hero-name">Gaurav</div>
-                <div class="hero-desig">- Developer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-                <div class="img-clone rs5"></div>
-                <div class="img rs5"></div>
-                <div class="hero-name">Viral</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="fixbox-wrapper">
-                  <div class="fixbox">
-                    <div class="heros-wrapper wow fadeIn" style="visibility: hidden; animation-name: none;">We were born <br>creative</div>
-                  </div>
-                </div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Darshan</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Ravindrasinh</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
+            <div class="container-small clearfix">
+                <ul>
+                    <li class="wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                        <div class="img-clone rs1"></div>
+                        <div class="img rs1"></div>
+                        <div class="hero-name">Bankim</div>
+                        <div class="hero-desig">- Sr. Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design heros">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                        <div class="img-clone rs2"></div>
+                        <div class="img rs2"></div>
+                        <div class="hero-name">Prabhat</div>
+                        <div class="hero-desig">- Project Manager</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                        <div class="img-clone rs3"></div>
+                        <div class="img rs3"></div>
+                        <div class="hero-name">Gaurav</div>
+                        <div class="hero-desig">- Developer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+                        <div class="img-clone rs5"></div>
+                        <div class="img rs5"></div>
+                        <div class="hero-name">Viral</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                        <div class="fixbox-wrapper">
+                            <div class="fixbox">
+                                <div class="heros-wrapper wow fadeIn" style="visibility: hidden; animation-name: none;">We were born <br>creative</div>
+                            </div>
+                        </div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Darshan</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Ravindrasinh</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
 
-              <li class="wow fadeIn" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; animation-name: none;">
-                <div class="img-clone rs8"></div>
-                <div class="img rs8"></div>
-                <div class="hero-name">Nilesh </div>
-                <div class="hero-desig">- S.Tester</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="0.9s" style="visibility: hidden; animation-delay: 0.9s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Bhagirathsinh</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="1.0s" style="visibility: hidden; animation-delay: 1s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Rushi </div>
-                <div class="hero-desig">- Developer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
+                    <li class="wow fadeIn" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; animation-name: none;">
+                        <div class="img-clone rs8"></div>
+                        <div class="img rs8"></div>
+                        <div class="hero-name">Nilesh </div>
+                        <div class="hero-desig">- S.Tester</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="0.9s" style="visibility: hidden; animation-delay: 0.9s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Bhagirathsinh</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="1.0s" style="visibility: hidden; animation-delay: 1s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Rushi </div>
+                        <div class="hero-desig">- Developer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
 
-              <li class="wow fadeIn" data-wow-delay="1.1s" style="visibility: hidden; animation-delay: 1.1s; animation-name: none;">
-                <div class="img-clone rs9"></div>
-                <div class="img rs9"></div>
-                <div class="hero-name">Devang </div>
-                <div class="hero-desig">- Creative Director</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="1.2s" style="visibility: hidden; animation-delay: 1.2s; animation-name: none;">
-                <div class="img-clone rs10"></div>
-                <div class="img rs10"></div>
-                <div class="hero-name">Himansu </div>
-                <div class="hero-desig">- Cinematic Videographer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
+                    <li class="wow fadeIn" data-wow-delay="1.1s" style="visibility: hidden; animation-delay: 1.1s; animation-name: none;">
+                        <div class="img-clone rs9"></div>
+                        <div class="img rs9"></div>
+                        <div class="hero-name">Devang </div>
+                        <div class="hero-desig">- Creative Director</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="1.2s" style="visibility: hidden; animation-delay: 1.2s; animation-name: none;">
+                        <div class="img-clone rs10"></div>
+                        <div class="img rs10"></div>
+                        <div class="hero-name">Himansu </div>
+                        <div class="hero-desig">- Cinematic Videographer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
 
-              <li class="wow fadeIn" data-wow-delay="1.3s" style="visibility: hidden; animation-delay: 1.3s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Umang</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
-              <li class="wow fadeIn" data-wow-delay="1.4s" style="visibility: hidden; animation-delay: 1.4s; animation-name: none;">
-                <div class="img-clone no0"></div>
-                <div class="img no0"></div>
-                <div class="hero-name">Ayaz</div>
-                <div class="hero-desig">- Designer</div>
-                <img src="images/heros/spacer.png" alt="Trionn Design Rockstars">
-              </li>
+                    <li class="wow fadeIn" data-wow-delay="1.3s" style="visibility: hidden; animation-delay: 1.3s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Umang</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
+                    <li class="wow fadeIn" data-wow-delay="1.4s" style="visibility: hidden; animation-delay: 1.4s; animation-name: none;">
+                        <div class="img-clone no0"></div>
+                        <div class="img no0"></div>
+                        <div class="hero-name">Ayaz</div>
+                        <div class="hero-desig">- Designer</div>
+                        <img src="images/gallery/spacer.png" alt="Trionn Design Rockstars">
+                    </li>
 
-              <li class="wow fadeIn" data-wow-delay="1.2s" style="visibility: hidden; animation-delay: 1.2s; animation-name: none;">
-                <div class="fixbox-wrapper">
-                  <div class="fixbox">
-                    <a href="mailto:hr@trionndesign.com" class="heros-wrapper wow fadeIn" title="" style="visibility: hidden; animation-name: none;">Join now!</a>
-                  </div>
-                </div>
-                <img src="images/heros/spacer.png" alt="">
-              </li>
-            </ul>
-          </div>
+                    <li class="wow fadeIn" data-wow-delay="1.2s" style="visibility: hidden; animation-delay: 1.2s; animation-name: none;">
+                        <div class="fixbox-wrapper">
+                            <div class="fixbox">
+                                <a href="mailto:hr@trionndesign.com" class="heros-wrapper wow fadeIn" title="" style="visibility: hidden; animation-name: none;">Join now!</a>
+                            </div>
+                        </div>
+                        <img src="images/gallery/spacer.png" alt="">
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
+<div class="start-project aniborder" id="start-project">
+    <div class="container clearfix">
+        <div class="container-small clearfix">
+            <h2 class="wow fadeInUpSmall">Вы ищете надежного подрядчика <br>для реализаци мечты?</h2>
+            <div class="block-title draw wow fadeIn" data-wow-delay="0.3s">
+                <div class="title">Обращайтесь</div>
+                <p>Мы предложим варианты в течении 24 часов</p>
+            </div>
+
+            <div class="start-project-block wow fadeIn">
+                <div class="launch"></div>
+                <h3>У вас есть <br>интересная идея?</h3>
+                <a href="#" title="">Давайте её обсудим</a>
+            </div>
+        </div>
+    </div>
+</div>
 
   </section>
 

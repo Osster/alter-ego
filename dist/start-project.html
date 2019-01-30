@@ -83,91 +83,108 @@
 
   <section id="ng-container" class="clearfix">
 
-<section class="contact-page" id="contact-page">
+<section class="project-page contact-page start-a-project-page" id="project-page">
     <div class="container clearfix">
-
         <div class="container-small clearfix">
-            <div class="block-title bte wow draw fadeInDown  btb-active"
-                 style="visibility: visible; animation-name: fadeInDown;">
-                <div class="title">Контакты</div>
-                <p>Альтер Эго Групп</p>
+            <div class="block-title bte wow draw fadeInDown btb-active" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="title">Начать проект</div>
+                <p>Давайте начнем сотрудничество</p>
             </div>
-            <div class="contact-tag wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
-                <h2>Альтер Эго Групп is full of <br>ideas &amp; creative power</h2>
-                <p>Where we seek the perfect balance <br>between ideas &amp; designs.</p>
+            <div class="project-tag wow fadeInUpSmall" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                <h2>Мы любим работать </br>над проектами, </br>которые вдохновляют.</h2>
+                <p>Мы готовы сделать нечто впечатляющее.</p>
             </div>
+
         </div>
-
-        <div class="contact-page-minsk wow fadeInUpSmall"
-             style="visibility: visible; animation-name: fadeInUpSmall;"></div>
-
-        <div class="container-medium clearfix">
-            <div class="office-location wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
-                <h3>Наш офис</h3>
-                <div>
-                    <address>
-                        <h4>Альтер Эго Групп</h4>
-                        Республика Беларусь,<br>город Минск,<br>пр-т Независимости 58/402.
-                    </address>
-                    +375 17 290-25-26<br>
-                    <a href="mailto:info@alterego.by" title="">info@alterego.by</a>
-                </div>
-            </div>
-            <a href="#" target="_blank" class="office-on-map wow fadeInUpSmall" data-wow-delay="0.1s" title=""
-               style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUpSmall;">
-                <div class="office-on-map_icon">
-                    <svg class="office-on-map_icon_location">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                             xlink:href="./images/svg/location.svg#location"></use>
-                    </svg>
-                    <svg class="office-on-map_icon_logo">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/alterego-logo.svg#logo"></use>
-                    </svg>
-                </div>
-                <br><br>
-                <h3>Найти нас на карте</h3>
-                <p>We are available for work!</p>
-            </a>
+        <div class="container-medium clearfix trionn-heros-lion wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">
+            <img src="images/alter-circles.png" alt="Alter Ego" class="trionn-lion" width="100%">
         </div>
     </div>
 </section>
-
-<section class="contact-form" id="contact-form">
+<section class="contact-form project-form start-project-section wow fadeInUpSmall" id="project-form" style="visibility: hidden; animation-name: none;">
     <div class="container clearfix">
-        <div class="container-small clearfix">
-            <div class="contact-tag wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">
-                <h2>We are excited that you want <br>to work with us.</h2>
-            </div>
-            <div class="block-title draw wow fadeIn" data-class="btcustom"
-                 style="visibility: visible; animation-name: fadeIn;">
-                <div class="title">Контактная <br>форма</div>
-                <p>Давайте сделаем нечто интересное вместе</p>
-            </div>
-            <div class="contact-form-wrapper wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <form method="post" name="c_form" action="" id="contactForm" onsubmit="return false;">
+        <div class="container-small project-form-container clearfix">
+
+            <div class="project-form-wrapper contact-form-wrapper" data-wow-delay="0.4s">
+                <form method="post" name="c_form" action="" id="projectForm" ng-submit="projectSubmit()" onsubmit="return false;" class="ng-pristine ng-valid">
                     <ul>
                         <li>
-                            <label>Имя*</label><input type="text" required="" pattern=".{3,100}"
-                                                       placeholder="Ваше имя" name="name" id="name" autocomplete="off">
+                            <label>Имя*</label><input type="text" pattern=".{3,100}" placeholder="Ваше имя" name="name" id="your_name" autocomplete="off">
                         </li>
                         <li>
-                            <label>Компания</label><input type="text" placeholder="Ваша компания" name="company_name"
-                                                         id="company_name" autocomplete="off">
+                            <label>Компания</label><input type="text" pattern=".{3,100}" placeholder="Название компании" name="company_name" id="company_name" autocomplete="off">
                         </li>
                         <li>
-                            <label>Email*</label><input type="text" required="" pattern=".{3,100}"
-                                                        placeholder="Ваш адрес email" name="email" id="email"
-                                                        autocomplete="off">
+                            <label>Email*</label><input type="text" pattern=".{3,100}" placeholder="Ваш email адрес" name="email" id="email" autocomplete="off">
                         </li>
                         <li>
-                            <label>Телефон</label><input type="text" name="phone"
-                                                       placeholder="Ваш номер телефона" autocomplete="off">
+                            <label>Телефон</label><input type="text" pattern=".{3,20}" id="phone" name="phone" placeholder="Ваш номер телефона" autocomplete="off">
                         </li>
                         <li>
-                            <label>Запрос</label>
-                            <textarea placeholder="Немного деталей о Вашей идее" id="comments" name="comments"></textarea>
+                            <label>Сайт</label><input type="text" id="website" name="website" placeholder="Адрес Вашего сайта" autocomplete="off">
                         </li>
                         <li>
+                            <label>Страна</label><input type="text" id="country" name="country" placeholder="Ваша страна" autocomplete="off">
+                        </li>
+
+                        <li class="full">
+                            <label>Тип проекта*</label>
+                            <ul class="start-project-type">
+                                <li class="">
+                                    <input type="checkbox" name="type_of_project[]" value="Web Design">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Событие</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Branding">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Контент</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Development">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Сайт</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Video">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Продвижение</div>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="type_of_project[]" value="Other">
+                                    <div class="service-icon"></div>
+                                    <div class="service-name">Другое</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>Бюджет*</label>
+                            <select name="budget" id="budget">
+                                <option value="">Выберите бюджет проекта</option>
+                                <option value="Less than 1000 USD">Менее $1000 USD</option>
+                                <option value="$1001 - $3000 USD">$1001 - $3000 USD</option>
+                                <option value="$3001 - $5000 USD">$3001 - $5000 USD</option>
+                                <option value="$5001 - $10000 USD">$5001 - $10000 USD</option>
+                                <option value="$10001 - $20000 USD">$10001 - $20000 USD</option>
+                                <option value="More than $20000 USD">Более $20000 USD</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Оцениваемая продолжительность работы*</label>
+                            <select name="timeframe" id="timeframe">
+                                <option value="">Каков дедлайн проекта?</option>
+                                <option value="Less then 1 month">Менее 1 месяца</option>
+                                <option value="2 Months">2 месяца </option>
+                                <option value="3 Months">3 месяца </option>
+                                <option value="6 Months">6 месяцев </option>
+                                <option value="Not Fixed">Нет фиксированного дедлайна</option>
+                            </select>
+                        </li>
+                        <li class="full">
+                            <label>Описание проекта</label>
+                            <textarea placeholder="Кратко опишите проект, цели, задачи и требования." id="aboutproject" name="aboutproject"></textarea>
+                        </li>
+                        <li class="full full-center">
                             <button type="submit">Отправить</button>
                         </li>
                     </ul>

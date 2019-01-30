@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Альтер Эго Групп</title>
+
+</head>
+<body>
+
+<div id="wrapper" class="wrapanim varWrapperClass">
+  <header>
+    <h1>
+        <a href="/" title="Альтер Эго Групп" class="td-logo">
+            <span class="band">
+                <svg>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/alterego-logo.svg#logo"></use>
+                </svg>
+            </span>
+        </a>
+      <span>Альтер Эго Групп -<br> креативная команда<br> и богатый опыт.</span>
+    </h1>
+
+    <div class="header-right">
+      <a href="/start-project.html" title="" class="start-project">Start a project</a>
+      <a href="javascript:void(0)" title="Navigation" class="menu-icon" @click="handleMenu"><em>Меню</em><span></span></a>
+    </div>
+
+    <section class="main-navigation" :style="mainNavigationStyle">
+      <div class="container clearfix">
+        <div class="container-small clearfix">
+            <div class="demo">
+                <button v-on:click="shuffle">Перемешать</button>
+                <transition-group name="flip-list" tag="ul">
+                    <li v-for="itemcust in itemscust" v-bind:key="itemcust">
+                        {{ itemcust }}
+                    </li>
+                </transition-group>
+            </div>
+          <nav>
+              <ul>
+                  <li v-for="item in items" :style="mainNavigationStyleLi">
+                        <a class="draw" :href="item.url">{{ item.name }}</a>
+                  </li>
+              </ul>
+          </nav>
+          <article class="map-icon">
+            Мы на связи<br>
+            <a href="mailto:info@alterego.by">info@alterego.by</a>
+          </article>
+          <div class="social">
+            <a href="#" target="_blank" title="Facebook"
+               class="facebook wow fadeInUp" data-wow-delay="0.1s">
+              <svg width="28px" height="28px" role="img" class="facebook-svg">
+                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="linkedin wow fadeInUp"
+               data-wow-delay="0.2s" title="Linkedin">
+              <svg width="28px" height="28px" role="img" class="linkedin-svg">
+                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="instagram wow fadeInDown"
+               data-wow-delay="0.3s" title="Instagram">
+              <svg width="28px" height="28px" role="img" class="instagram-svg">
+                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="twitter wow fadeInUp"
+               data-wow-delay="0.4s" title="Twitter">
+              <svg width="28px" height="28px" role="img" class="twitter-svg">
+                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <section id="ng-container" class="clearfix">
+
+
+<section class="project-detail" id="project-detail">
+    <div class="project-detail-wrapper">
+        <div class="project-photo">
+            <img alt="" src="./images/event/photo.jpg">
+            <div class="container">
+                <div class="container-small clearfix">
+                    <div class="block-title bte draw wow fadeInDown  btb-active"
+                         style="visibility: visible; animation-name: fadeInDown;">
+                        <div class="title">Work / <br>development</div>
+                        <p>Our clients really <br>value our work</p>
+                    </div>
+                    <div class="project-title wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h2>Capelo</h2>
+                        <h3>Magento - e-commerce</h3>
+                        <a href="http://www.capelo.gr/" target="_blank">Visit live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-details-inner">
+            <div class="project-content">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <h2 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Hats with
+                            the <br>taste...</h2>
+                        <div class="project-service wow fadeInUp" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <h4>Technology</h4>
+                            <ul>
+                                <li>Custom Development</li>
+                                <li>User interface / UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-photo2">
+                <div class="container clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <ul>
+                        <li class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <img alt="Design and Development" src="./images/event/photo2.jpg">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-content wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <h4>Capelo.gr is an e-shop with a large selection of hats,
+                            jockeys, <br>beanies and accessories for every style.</h4>
+                        <p>Famous brands at the best prices in an e-shop with
+                            easy navigation, <br>fast search engine and advanced filters.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-screen">
+                <div class="container">
+                    <div class="container-medium clearfix ">
+                        <img alt="Design and Development" class="wow fadeIn"
+                             src="./images/event/screen.jpg"
+                             style="visibility: hidden; animation-name: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="project-laptop">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <div class="project-laptop-background">
+                            <img alt="Design and Development" class="wow fadeIn"
+                                 src="./images/event/laptop-background.jpg"
+                                 style="visibility: hidden; animation-name: none;">
+                        </div>
+                        <img alt="Design and Development" class="wow fadeInUp"
+                             src="./images/event/laptop.png"
+                             style="visibility: hidden; animation-name: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="project-ipad">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <img alt="Design and Development" class="wow fadeInLeft"
+                             src="./images/event/ipad.png"
+                             style="visibility: hidden; animation-name: none;">
+                        <div class="project-ipad-content wow fadeInRight"
+                             style="visibility: hidden; animation-name: none;">
+                            <h4>Capelo is a top online luxury fashion destination with 4.000.000 visitors per month
+                                and worldwide shipping.</h4>
+                            <p>The website features designer clothes, shoes and accessories for men and women from
+                                the most prestigious fashion designers such as Alexander McQueen, Balmain, Chloe,
+                                Dior, Dsquared, Dolce and Gabbana, Givenchy, Lanvin, Rick Owens, Roberto Cavalli,
+                                Saint Lauren. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-other-thumb">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <div class="project-other-thumb1 wow fadeInDown"
+                             style="visibility: hidden; animation-name: none;">
+                            <img src="./images/event/other-thumb1.jpg">
+                        </div>
+                        <div class="project-other-thumb2 wow fadeInUp"
+                             style="visibility: hidden; animation-name: none;">
+                            <img src="./images/event/other-thumb2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-iphone wow fadeIn" style="visibility: hidden; animation-name: none;">
+                <img alt="Design and Development" src="./images/event/iphone.png">
+            </div>
+            <div class="project-slider wow fadeIn" style="visibility: hidden; animation-name: none;">
+                <div class="container">
+                    <div class="container-medium clearfix">
+                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                            <div class="bx-viewport" aria-live="polite"
+                                 style="width: 100%; overflow: hidden; position: relative; height: 696px;">
+                                <ul class="bx-slider"
+                                    style="width: 1215%; position: relative; transition-duration: 0s; transform: translate3d(-1273px, 0px, 0px);">
+                                    <li class="bx-clone"
+                                        style="float: left; list-style: outside none none; position: relative; width: 1273px;"
+                                        aria-hidden="true">
+                                        <img class="wow fadeInUp" alt="Design and Development"
+                                             src="./images/event/slide1.jpg"
+                                             style="visibility: hidden; animation-name: none;">
+                                    </li>
+                                    <li style="float: left; list-style: outside none none; position: relative; width: 1273px;"
+                                        aria-hidden="false">
+                                        <img class="wow fadeInUp" alt="Design and Development"
+                                             src="./images/event/slide1.jpg"
+                                             style="visibility: hidden; animation-name: none;">
+                                    </li>
+                                    <li style="float: left; list-style: outside none none; position: relative; width: 1273px;"
+                                        aria-hidden="true">
+                                        <img ng-src="images/work/development/capelo/slide1.jpg"
+                                             class="wow fadeInUp" alt="Design and Development"
+                                             src="./images/event/slide1.jpg"
+                                             style="visibility: hidden; animation-name: none;">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-nav">
+                <div class="container clearfix">
+                    <div class="line btwe"></div>
+                    <a class="prev-nav" title="Previous project" href="work/development/my-designer-wardrobe">Previous
+                        <span>My Designer Wardrobe</span></a>
+                    <a class="back-nav" title="Work" href="work/development">
+                        <svg height="24px" width="24px" role="img">
+                            <use xlink:href="images/svg_symbols.svg#nav-all" id="miu"></use>
+                        </svg>
+                    </a>
+                    <a class="next-nav" title="Next project" href="work/development/3axes">Next
+                        <span>3axes</span></a>
+                    <div class="line bottom-line btwe"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="sticky-proj-nav">
+    <a class="sticky-prev-nav" title="Previous project" href="work/development/my-designer-wardrobe">
+        <svg height="35px" width="80px" role="img">
+            <use xlink:href="images/svg_symbols.svg#nav-arrow"></use>
+        </svg>
+    </a>
+    <a class="sticky-list-nav" href="/event.html">
+        <svg height="24px" width="24px" role="img">
+            <use xlink:href="images/svg_symbols.svg#nav-all" title="Work" id="miu"></use>
+        </svg>
+    </a>
+    <a class="sticky-next-nav" title="Next project" href="work/development/3axes">
+        <svg height="35px" width="80px" role="img">
+            <use xlink:href="images/svg_symbols.svg#nav-arrow"></use>
+        </svg>
+    </a>
+</div>
+<div>
+    <a href="#wrapper" class="moveup" title="Top" style="display: block;">
+        <svg height="35px" width="80px" role="img">
+            <use xlink:href="images/svg/svg_symbols.svg#nav-arrow"></use>
+        </svg>
+    </a>
+</div>
+
+
+<div class="start-project aniborder" id="start-project">
+    <div class="container clearfix">
+        <div class="container-small clearfix">
+            <h2 class="wow fadeInUpSmall">Вы ищете надежного подрядчика <br>для реализаци мечты?</h2>
+            <div class="block-title draw wow fadeIn" data-wow-delay="0.3s">
+                <div class="title">Обращайтесь</div>
+                <p>Мы предложим варианты в течении 24 часов</p>
+            </div>
+
+            <div class="start-project-block wow fadeIn">
+                <div class="launch"></div>
+                <h3>У вас есть <br>интересная идея?</h3>
+                <a href="#" title="">Давайте её обсудим</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </section>
+
+
+  <div class="contact" id="contact">
+    <div class="container clearfix">
+      <div class="container-medium clearfix wow fadeInUpSmall">
+        <h4>Контакты</h4>
+        <p>Вы можете быстро получить ответ по <br>email, телефону или skype.<span class="line bottom-line"></span></p>
+      </div>
+      <div class="container-small clearfix wow fadeInUpSmall">
+        <ul>
+          <li>
+            <a href="mailto:info@alterego.by" class="icon inquire-icon" title="">
+              <svg class="inquire-icon-svg" width="132px" height="132px" role="img">
+                <use xlink:href="./../../images/svg_symbols.svg#inquire-icon"></use>
+              </svg>
+              Отправь нам письмо <span>info@alterego.by</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+375172902526" class="icon mobile-icon" title="">
+              <svg class="mobile-icon-svg" width="132px" height="132px" role="img">
+                <use xlink:href="./../../images/svg_symbols.svg#mobile-icon"></use>
+              </svg>
+              Набери номер <span>+375 17 290-25-26</span>
+            </a>
+          </li>
+          <li>
+            <a href="skype:alter.ego.grupp?add" class="icon chat-icon" title="">
+              <svg width="132px" height="132px" class="chat-icon-svg" role="img">
+                <use xlink:href="./../../images/svg_symbols.svg#chat-icon"></use>
+              </svg>
+              Чат в Skype<span>alter.ego.grupp</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="social">
+          <a href="#" target="_blank" class="facebook wow fadeInUp"
+             data-wow-delay="0.1s" title="Facebook">
+            <svg width="28px" height="28px" role="img" class="facebook-svg">
+              <use xlink:href="./../../images/svg_symbols.svg#fb-logo"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="linkedin wow fadeInUp"
+             data-wow-delay="0.2s" title="LinkedIn">
+            <svg width="28px" height="28px" role="img" class="linkedin-svg">
+              <use xlink:href="./../../images/svg_symbols.svg#linkedin-logo"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="instagram wow fadeInDown"
+             data-wow-delay="0.3s" title="Instagram">
+            <svg width="28px" height="28px" role="img" class="instagram-svg">
+              <use xlink:href="./../../images/svg_symbols.svg#instagram-logo"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="twitter wow fadeInUp" data-wow-delay="0.4s"
+             title="Twitter">
+            <svg width="28px" height="28px" role="img" class="twitter-svg">
+              <use xlink:href="./../../images/svg_symbols.svg#twitter-logo"></use>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <a href="/" title="Trionn Design">
+        <img src="./images/logo-100.png">
+      </a>
+      <span>© 2019 Альтэр Эго Групп </span>
+    </div>
+  </footer>
+  </div>
+
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
