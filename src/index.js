@@ -32,10 +32,10 @@ new Vue({
 		showLanding: true,
 		drawHover: true,
 		items: [
-			{name: 'event', url: '/event.html', delay: '1s'},
-			{name: 'content', url: '/content.html', delay: '2s'},
-			{name: 'digital', url: '/digital.html', delay: '3s'},
-			{name: 'contact', url: '/contact.html', delay: '4s'}
+			{name: 'event', url: '/event.html'},
+			{name: 'content', url: '/content.html'},
+			{name: 'digital', url: '/digital.html'},
+			{name: 'contact', url: '/contact.html'}
 		]
 	},
 	mounted() {
@@ -71,6 +71,10 @@ new Vue({
 				? 'opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); transition:  all .5s ease; transition-delay: 0.5s;'
 				: 'opacity: 0; transform: matrix(1, 0, 0, 1, 0, -180); transition:  all .5s ease;';
 
+			// var NavigationLi = document.getElementsByClassName('mainNavigationLi');
+			// TweenMax.staggerTo([NavigationLi], 1, {opacity:1,transform: matrix(1, 0, 0, 1, 0, 0),}, 0.25);
+
+
 			// this.items.length
 			// var p = this.items.length;
 			// for (let j = 1; j <= p; j++) {
@@ -99,12 +103,3 @@ new Vue({
 		}
 	},
 });
-
-export default {
-	mounted() {
-		const { box } = this.$refs
-		const timeline = new TimelineLite()
-
-		timeline.to(box, 1, { x: 200, rotation: 90 })
-	}
-}

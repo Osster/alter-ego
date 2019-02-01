@@ -31,57 +31,50 @@
 
         <section class="main-navigation" :style="mainNavigationStyle">
             <div class="container clearfix">
-                <nav class="container-small clearfix">
-                    <!--<nav>-->
-                        <!--&lt;!&ndash;<button v-on:click="show = !show">&ndash;&gt;-->
-                            <!--&lt;!&ndash;Переключить&ndash;&gt;-->
-                        <!--&lt;!&ndash;</button>&ndash;&gt;-->
-                        <!--<ul v-if="show">-->
-                            <!--<transition-group name="fade">-->
-                            <!--<li v-for="item in items">-->
-                                <!--<transition name="fade" mode="out-in">-->
-                                    <!--<a class="draw" :href="item.url">{{ item.name }}</a>-->
-                            <!--</li>-->
-                            <!--</transition-group>-->
-                        <!--</ul>-->
-                    <!--</nav>-->
-                    <nav>
-                        <ul>
-                            <li v-for="item in items" :style="mainNavigationStyleLi">
-                                <a class="draw" :href="item.url">{{ item.name }}</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <article class="map-icon">
-                        Мы на связи<br>
-                        <a href="mailto:info@alterego.by">info@alterego.by</a>
-                    </article>
-                    <div class="social">
-                        <a href="#" target="_blank" title="Facebook"
-                           class="facebook wow fadeInUp" data-wow-delay="0.1s">
-                            <svg width="28px" height="28px" role="img" class="facebook-svg">
-                                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" class="linkedin wow fadeInUp"
-                           data-wow-delay="0.2s" title="Linkedin">
-                            <svg width="28px" height="28px" role="img" class="linkedin-svg">
-                                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" class="instagram wow fadeInDown"
-                           data-wow-delay="0.3s" title="Instagram">
-                            <svg width="28px" height="28px" role="img" class="instagram-svg">
-                                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" class="twitter wow fadeInUp"
-                           data-wow-delay="0.4s" title="Twitter">
-                            <svg width="28px" height="28px" role="img" class="twitter-svg">
-                                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
-                            </svg>
-                        </a>
-                    </div>
+                <!--<nav>-->
+                    <!--<ul>-->
+                        <!--<li v-for="item in items" :style="mainNavigationStyleLi">-->
+                            <!--<a class="draw" :href="item.url">{{ item.name }}</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</nav>-->
+                <nav>
+                    <ul>
+                        <li v-for="item in items" class="mainNavigationLi" :style="mainNavigationStyleLi">
+                            <a class="draw" :href="item.url">{{ item.name }}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <article class="map-icon">
+                    Мы на связи<br>
+                    <a href="mailto:info@alterego.by">info@alterego.by</a>
+                </article>
+                <div class="social">
+                    <a href="#" target="_blank" title="Facebook"
+                       class="facebook wow fadeInUp" data-wow-delay="0.1s">
+                        <svg width="28px" height="28px" role="img" class="facebook-svg">
+                            <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="linkedin wow fadeInUp"
+                       data-wow-delay="0.2s" title="Linkedin">
+                        <svg width="28px" height="28px" role="img" class="linkedin-svg">
+                            <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="instagram wow fadeInDown"
+                       data-wow-delay="0.3s" title="Instagram">
+                        <svg width="28px" height="28px" role="img" class="instagram-svg">
+                            <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="twitter wow fadeInUp"
+                       data-wow-delay="0.4s" title="Twitter">
+                        <svg width="28px" height="28px" role="img" class="twitter-svg">
+                            <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
     </header>
