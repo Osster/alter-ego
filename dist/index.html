@@ -1,305 +1,319 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Альтер Эго Групп</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Альтер Эго Групп</title>
 
 </head>
 <body>
 
 <div id="wrapper" class="wrapanim varWrapperClass">
-  <header>
-    <h1>
-        <a href="/" title="Альтер Эго Групп" class="td-logo">
+    <header>
+        <h1>
+            <a href="/" title="Альтер Эго Групп" class="td-logo">
             <span class="band">
                 <svg>
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/alterego-logo.svg#logo"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:href="./images/svg/alterego-logo.svg#logo"></use>
                 </svg>
             </span>
-        </a>
-      <span>Альтер Эго Групп -<br> креативная команда<br> и богатый опыт.</span>
-    </h1>
+            </a>
+            <span>Альтер Эго Групп -<br> креативная команда<br> и богатый опыт.</span>
+        </h1>
 
-    <div class="header-right">
-      <a href="/start-project.html" title="" class="start-project">Start a project</a>
-      <a href="javascript:void(0)" title="Navigation" class="menu-icon" @click="handleMenu"><em>Меню</em><span></span></a>
-    </div>
-
-    <section class="main-navigation" :style="mainNavigationStyle">
-      <div class="container clearfix">
-        <div class="container-small clearfix">
-            <div class="demo">
-                <button v-on:click="shuffle">Перемешать</button>
-                <transition-group name="flip-list" tag="ul">
-                    <li v-for="itemcust in itemscust" v-bind:key="itemcust">
-                        {{ itemcust }}
-                    </li>
-                </transition-group>
-            </div>
-          <nav>
-              <ul>
-                  <li v-for="item in items" :style="mainNavigationStyleLi">
-                        <a class="draw" :href="item.url">{{ item.name }}</a>
-                  </li>
-              </ul>
-          </nav>
-          <article class="map-icon">
-            Мы на связи<br>
-            <a href="mailto:info@alterego.by">info@alterego.by</a>
-          </article>
-          <div class="social">
-            <a href="#" target="_blank" title="Facebook"
-               class="facebook wow fadeInUp" data-wow-delay="0.1s">
-              <svg width="28px" height="28px" role="img" class="facebook-svg">
-                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
-              </svg>
-            </a>
-            <a href="#" target="_blank" class="linkedin wow fadeInUp"
-               data-wow-delay="0.2s" title="Linkedin">
-              <svg width="28px" height="28px" role="img" class="linkedin-svg">
-                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
-              </svg>
-            </a>
-            <a href="#" target="_blank" class="instagram wow fadeInDown"
-               data-wow-delay="0.3s" title="Instagram">
-              <svg width="28px" height="28px" role="img" class="instagram-svg">
-                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
-              </svg>
-            </a>
-            <a href="#" target="_blank" class="twitter wow fadeInUp"
-               data-wow-delay="0.4s" title="Twitter">
-              <svg width="28px" height="28px" role="img" class="twitter-svg">
-                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
-              </svg>
-            </a>
-          </div>
+        <div class="header-right">
+            <a href="/start-project.html" title="" class="start-project">Start a project</a>
+            <a href="javascript:void(0)" title="Navigation" class="menu-icon"
+               @click="handleMenu"><em>Меню</em><span></span></a>
         </div>
-      </div>
-    </section>
-  </header>
+
+        <section class="main-navigation" :style="mainNavigationStyle">
+            <div class="container clearfix">
+                <nav class="container-small clearfix">
+                    <!--<nav>-->
+                        <!--&lt;!&ndash;<button v-on:click="show = !show">&ndash;&gt;-->
+                            <!--&lt;!&ndash;Переключить&ndash;&gt;-->
+                        <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                        <!--<ul v-if="show">-->
+                            <!--<transition-group name="fade">-->
+                            <!--<li v-for="item in items">-->
+                                <!--<transition name="fade" mode="out-in">-->
+                                    <!--<a class="draw" :href="item.url">{{ item.name }}</a>-->
+                            <!--</li>-->
+                            <!--</transition-group>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                    <nav>
+                        <ul>
+                            <li v-for="item in items" :style="mainNavigationStyleLi">
+                                <a class="draw" :href="item.url">{{ item.name }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <article class="map-icon">
+                        Мы на связи<br>
+                        <a href="mailto:info@alterego.by">info@alterego.by</a>
+                    </article>
+                    <div class="social">
+                        <a href="#" target="_blank" title="Facebook"
+                           class="facebook wow fadeInUp" data-wow-delay="0.1s">
+                            <svg width="28px" height="28px" role="img" class="facebook-svg">
+                                <use xlink:href="./images/svg_symbols.svg#fb-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="linkedin wow fadeInUp"
+                           data-wow-delay="0.2s" title="Linkedin">
+                            <svg width="28px" height="28px" role="img" class="linkedin-svg">
+                                <use xlink:href="./images/svg_symbols.svg#linkedin-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="instagram wow fadeInDown"
+                           data-wow-delay="0.3s" title="Instagram">
+                            <svg width="28px" height="28px" role="img" class="instagram-svg">
+                                <use xlink:href="./images/svg_symbols.svg#instagram-logo"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="twitter wow fadeInUp"
+                           data-wow-delay="0.4s" title="Twitter">
+                            <svg width="28px" height="28px" role="img" class="twitter-svg">
+                                <use xlink:href="./images/svg_symbols.svg#twitter-logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+            </div>
+        </section>
+    </header>
 
 
-  <section id="ng-container" class="clearfix">
+<section id="ng-container" class="clearfix">
 
-    <div class="landing clearfix" id="landing" :style="showLanding ? '' : 'opacity: 0;'">
-      <div class="landing-wrapper" style="height: 976px;">
+<div class="landing clearfix" id="landing" :style="showLanding ? '' : 'opacity: 0;'">
+    <div class="landing-wrapper" style="height: 976px;">
         <div class="lion">
-          <!--<div class="lion" id="l_svg">-->
-              <!--<div class="alter-img">-->
-                <!--&lt;!&ndash;<img src="images/alter-circles.png" alt="Alter Ego" class="trionn-lion">&ndash;&gt;-->
-              <!--</div>-->
-              <!--&lt;!&ndash;<svg x="0px" y="0px" width="749.495px" height="755.434px" xml:space="preserve">&ndash;&gt;-->
-                  <!--&lt;!&ndash;<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/lion.svg#svglion"></use>&ndash;&gt;-->
-              <!--&lt;!&ndash;</svg>&ndash;&gt;-->
-          <!--</div>-->
-          <div class="landing-slogan">
-            <div class="landing-slogan-wrapper">
-              <h2 class="wow fadeInUpSmall" style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">Креатив и
-                инновации <br>во всём</h2>
-              <a href="#" title="" class="wow fadeInUpSmall" data-wow-delay="0.5s"
-                 style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">Подробнее</a>
+            <!--<div class="lion" id="l_svg">-->
+            <!--<div class="alter-img">-->
+            <!--&lt;!&ndash;<img src="images/alter-circles.png" alt="Alter Ego" class="trionn-lion">&ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<svg x="0px" y="0px" width="749.495px" height="755.434px" xml:space="preserve">&ndash;&gt;-->
+            <!--&lt;!&ndash;<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/lion.svg#svglion"></use>&ndash;&gt;-->
+            <!--&lt;!&ndash;</svg>&ndash;&gt;-->
+            <!--</div>-->
+            <div class="landing-slogan">
+                <div class="landing-slogan-wrapper">
+                    <h2 class="wow fadeInUpSmall" style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">Креатив
+                        и
+                        инновации <br>во всём</h2>
+                    <a href="#" title="" class="wow fadeInUpSmall" data-wow-delay="0.5s"
+                       style="animation-delay: 0.5s; animation-name: fadeInUpSmall;">Подробнее</a>
+                </div>
             </div>
-          </div>
-          <div class="mouse-icon">
-            <div class="wheel"></div>
-          </div>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <div class="home clearfix" id="home" style="height: 436px;">
-      <div class="home-wrapper">
+<template>
+    <div ref="box" class="box"></div>
+</template>
+
+<div class="home clearfix" id="home" style="height: 436px;">
+    <div class="home-wrapper">
         <div class="tag-line" style="height: 436px;">
-          Наш любимый
-          <span class="tag-line-bold">стиль</span>
-          <span class="tag-line-red" id="creativeId">
+            Наш любимый
+            <span class="tag-line-bold">стиль</span>
+            <span class="tag-line-red" id="creativeId">
               <svg x="0px" y="0px" width="600px" height="188px" xml:space="preserve">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/creative.svg#creative"></use>
               </svg>
 			</span>
         </div>
-      </div>
     </div>
+</div>
 
-    <div class="tagline clearfix">
-      <div class="tagline-wrapper" style="height: 976px;">
+<div class="tagline clearfix">
+    <div class="tagline-wrapper" style="height: 976px;">
         <h3 class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall;">Мы предоставляем
-          полный спектр
-          <span>услуг и идей</span>
-          для продвижения бизнеса.</h3>
-      </div>
+            полный спектр <span>услуг и идей</span> для продвижения бизнеса.</h3>
     </div>
+</div>
 
-    <div class="featured aniborder" id="featured">
+<div class="featured aniborder" id="featured">
 
-      <div class="container clearfix">
+    <div class="container clearfix">
 
         <div class="container-small clearfix">
 
-          <div class="block-title draw">
-            <div class="title">Наши сильные стороны</div>
-            <p>приводящие <br>клиентов в восторг</p>
-          </div>
+            <div class="block-title draw" :class="drawHover ? '' : 'btb-active'">
+                <div class="title">Наши сильные стороны</div>
+                <p>приводящие <br>клиентов в восторг</p>
+            </div>
         </div>
 
         <ul>
-          <li class="homepage-project1">
-            <a href="/event.html" title="">
-              <div class="img-clone"></div>
-              <div class="img"></div>
-              <div class="container-medium clearfix">
-                <div class="featured-slide-content">
-                  <div class="container-small clearfix">
-                    <h3>Event & BTL</h3>
-                    <p>Незабываемые события любого масштаба</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
+            <li class="homepage-project1">
+                <a href="/event.html" title="">
+                    <div class="img-clone"></div>
+                    <div class="img"></div>
+                    <div class="container-medium clearfix">
+                        <div class="featured-slide-content">
+                            <div class="container-small clearfix">
+                                <h3>Event & BTL</h3>
+                                <p>Незабываемые события любого масштаба</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
         </ul>
 
         <div class="container-medium featured-2cols">
-          <ul>
-            <li class="wow fadeInUpSmall homepage-project2" data-wow-delay="0.2s">
-              <a href="/content.html" title="">
-                <div class="img-clone"></div>
-                <div class="img"></div>
-                <div class="featured-slide-content">
-                  <div class="container-small clearfix">
-                    <h3>Design & Content</h3>
-                    <p>Создание медиа контента</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="homepage-project3 wow fadeInUpSmall" data-wow-delay="0.3s">
-              <a href="/digital.html" title="">
-                <div class="img-clone"></div>
-                <div class="img"></div>
-                <div class="featured-slide-content">
-                  <div class="container-small clearfix">
-                    <h3>Digital & Marketing</h3>
-                    <p>Разработка и продвижение интернет проектов</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
+            <ul>
+                <li class="wow fadeInUpSmall homepage-project2" data-wow-delay="0.2s">
+                    <a href="/content.html" title="">
+                        <div class="img-clone"></div>
+                        <div class="img"></div>
+                        <div class="featured-slide-content">
+                            <div class="container-small clearfix">
+                                <h3>Design & Content</h3>
+                                <p>Создание медиа контента</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="homepage-project3 wow fadeInUpSmall" data-wow-delay="0.3s">
+                    <a href="/digital.html" title="">
+                        <div class="img-clone"></div>
+                        <div class="img"></div>
+                        <div class="featured-slide-content">
+                            <div class="container-small clearfix">
+                                <h3>Digital & Marketing</h3>
+                                <p>Разработка и продвижение интернет проектов</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-
-      </div>
 
     </div>
 
-    <div class="agency aniborder" id="agency">
-      <div class="container clearfix">
+</div>
+
+<div class="agency aniborder" id="agency">
+    <div class="container clearfix">
         <div class="container-medium clearfix">
-          <div class="agency-tag ">
-            <h2 class="wow fadeInUpSmall">Креатив <br>дизайн и разработка</h2>
-            <div class="block-title draw wow fadeIn" data-wow-delay="0.4s">
-              <div class="title">Агенство</div>
-              <p>Лауреат множества наград</p>
-            </div>
-          </div>
-          <div class="agency-exp-awards wow fadeIn">
-            <div class="block-title wow fadeIn">
-              <div class="title">Достижения</div>
-              <article>
-                <div class="maskNumber">
-                  <div class="tn_counter fifty" style="height: 121px;">
-                    <ul>
-                      <li>0<br>1<br>2<br>3<br>4<br>5<br></li>
-                    </ul>
-                    <ul>
-                      <li>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br></li>
-                    </ul>
-                    <span>+</span>
-                  </div>
+            <div class="agency-tag ">
+                <h2 class="wow fadeInUpSmall">Креатив <br>дизайн и разработка</h2>
+                <div class="block-title draw wow fadeIn" data-wow-delay="0.4s" >
+                    <div class="title">Агенство</div>
+                    <p>Лауреат множества наград</p>
                 </div>
-                Сотни благодарных клиентов <br class="br"> и ярких событий.
-              </article>
             </div>
-            <div class="block-title wow fadeIn">
-              <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
-                <div class="bx-viewport" aria-live="polite"
-                     style="width: 100%; overflow: hidden; position: relative; height: 260px;">
-                  <ul class="awards-slider" style="width: auto; position: relative;">
-                    <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
-                        aria-hidden="true">
-                      <div class="title">Awwwards</div>
-                      <article><img src="./../../images/awwards-logo.png" alt="Won honorable awards from Awwward's"><br>Honorable
-                        mention
-                      </article>
-                    </li>
-                    <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 50; display: list-item;"
-                        aria-hidden="false">
-                      <div class="title">A'Design</div>
-                      <article>
-                        <img src="./../../images/adesign-logo.png" alt="Won silver trophy from Adesign awards">
-                        <br>Silver Trophy
-                      </article>
-                    </li>
-                    <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
-                        aria-hidden="true">
-                      <div class="title">CSS Design</div>
-                      <article>
-                        <img src="./../../images/cssdesign-logo.png" alt="Won site of the day awards from CSS Design">
-                        <br>Site of the day
-                      </article>
-                    </li>
-                    <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
-                        aria-hidden="true">
-                      <div class="title">Web guru</div>
-                      <article>
-                        <img src="./../../images/guru-logo.png" alt="Won Guru of the day awards from Web Guru Awards">
-                        <br>Guru of the day
-                      </article>
-                    </li>
-                    <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
-                        aria-hidden="true">
-                      <div class="title">D.Nominees</div>
-                      <article>
-                        <img src="./../../images/dn-logo.png" alt="Won site of the day awards from Design Nominees">
-                        <br>Site of the day
-                      </article>
-                    </li>
-                  </ul>
+            <div class="agency-exp-awards wow fadeIn">
+                <div class="block-title wow fadeIn">
+                    <div class="title">Достижения</div>
+                    <article>
+                        <div class="maskNumber">
+                            <div class="tn_counter fifty" style="height: 121px;">
+                                <ul>
+                                    <li>0<br>1<br>2<br>3<br>4<br>5<br></li>
+                                </ul>
+                                <ul>
+                                    <li>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br></li>
+                                </ul>
+                                <span>+</span>
+                            </div>
+                        </div>
+                        Сотни благодарных клиентов <br class="br"> и ярких событий.
+                    </article>
                 </div>
-              </div>
+                <div class="block-title wow fadeIn">
+                    <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                        <div class="bx-viewport" aria-live="polite"
+                             style="width: 100%; overflow: hidden; position: relative; height: 260px;">
+                            <ul class="awards-slider" style="width: auto; position: relative;">
+                                <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                    aria-hidden="true">
+                                    <div class="title">Awwwards</div>
+                                    <article><img src="./../../images/awwards-logo.png"
+                                                  alt="Won honorable awards from Awwward's"><br>Honorable
+                                        mention
+                                    </article>
+                                </li>
+                                <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 50; display: list-item;"
+                                    aria-hidden="false">
+                                    <div class="title">A'Design</div>
+                                    <article>
+                                        <img src="./../../images/adesign-logo.png"
+                                             alt="Won silver trophy from Adesign awards">
+                                        <br>Silver Trophy
+                                    </article>
+                                </li>
+                                <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                    aria-hidden="true">
+                                    <div class="title">CSS Design</div>
+                                    <article>
+                                        <img src="./../../images/cssdesign-logo.png"
+                                             alt="Won site of the day awards from CSS Design">
+                                        <br>Site of the day
+                                    </article>
+                                </li>
+                                <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                    aria-hidden="true">
+                                    <div class="title">Web guru</div>
+                                    <article>
+                                        <img src="./../../images/guru-logo.png"
+                                             alt="Won Guru of the day awards from Web Guru Awards">
+                                        <br>Guru of the day
+                                    </article>
+                                </li>
+                                <li style="float: none; list-style: outside none none; position: absolute; width: 452px; z-index: 0; display: none;"
+                                    aria-hidden="true">
+                                    <div class="title">D.Nominees</div>
+                                    <article>
+                                        <img src="./../../images/dn-logo.png"
+                                             alt="Won site of the day awards from Design Nominees">
+                                        <br>Site of the day
+                                    </article>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="about-agency wow fadeIn" data-wow-delay="0.2s">
-            <p><strong>Альтэр Эго Групп одно из наиболее ярких агенств Беларуси, заслужившее доверие и признание в
-              регионе с главным офисом в городе Минск.</strong></p>
-            <p>Основано в сентябре 2012.</p>
-            <p>Мы воплощаем самые сложные и смелые идеи в жизнь.</p>
-            <a href="#" class="more">
-                <svg>
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/arrow.svg#arrow"></use>
-                </svg>
-            </a>
-          </div>
+            <div class="about-agency wow fadeIn" data-wow-delay="0.2s">
+                <p><strong>Альтэр Эго Групп одно из наиболее ярких агенств Беларуси, заслужившее доверие и признание в
+                    регионе с главным офисом в городе Минск.</strong></p>
+                <p>Основано в сентябре 2012.</p>
+                <p>Мы воплощаем самые сложные и смелые идеи в жизнь.</p>
+                <a href="#" class="more">
+                    <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/svg/arrow.svg#arrow"></use>
+                    </svg>
+                </a>
+            </div>
 
-          <div class="agency-founder wow fadeIn td-hx" data-wow-delay="0.3s">
-            <div class="block-title draw">
-              <div class="title">Александр <br> Рак</div>
-              <p>Основатель и CEO</p>
+            <div class="agency-founder wow fadeIn td-hx" data-wow-delay="0.3s">
+                <div class="block-title draw">
+                    <div class="title">Александр <br> Рак</div>
+                    <p>Основатель и CEO</p>
+                </div>
+                <a href="/agency" title="">
+                    <div class="img tdhxe" style="transform: matrix(1, 0, 0, 1, 0, 100);"></div>
+                </a>
             </div>
-            <a href="/agency" title="">
-              <div class="img tdhxe" style="transform: matrix(1, 0, 0, 1, 0, 100);"></div>
-            </a>
-          </div>
 
         </div>
-      </div>
     </div>
+</div>
 
 <section class="agency-clients">
     <div class="container clearfix">
-        <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">Many popular brands &amp; sectors entrust<br> their company image in us!</h2>
+        <h2 class="wow fadeInUpSmall" style="visibility: hidden; animation-name: none;">Многие бренды и компании доверяют нам </br>создание впечатления о себе!</h2>
         <div class="block-title wow fadeIn draw" data-wow-delay="0.2s" data-class="btcustom" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
             <div class="title">Клиенты</div>
             <p>Мы любим наших клиентов </br>и они ценят нас</p>
@@ -447,7 +461,7 @@
 <div class="start-project aniborder" id="start-project">
     <div class="container clearfix">
         <div class="container-small clearfix">
-            <h2 class="wow fadeInUpSmall">Вы ищете надежного подрядчика <br>для реализаци мечты?</h2>
+            <h2 class="wow fadeInUpSmall">Вы ищете надежного подрядчика <br>для реализации мечты?</h2>
             <div class="block-title draw wow fadeIn" data-wow-delay="0.3s">
                 <div class="title">Обращайтесь</div>
                 <p>Мы предложим варианты в течении 24 часов</p>

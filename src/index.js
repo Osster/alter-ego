@@ -1,4 +1,5 @@
 import {WOW} from 'wowjs';
+import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 // import Vue from 'vue';
 import sprite from "../src/images/svg_symbols.svg";
 
@@ -16,6 +17,7 @@ const wow = new WOW(
 		scrollContainer: null // optional scroll container selector, otherwise use window
 	}
 );
+
 wow.init();
 
 new Vue({
@@ -57,9 +59,6 @@ new Vue({
 		},
 	},
 	methods: {
-		shuffle: function () {
-			this.itemscust = _.shuffle(this.itemscust)
-		},
 		handleMenu() {
 			const body = document.body;
 			this.mainNavigation = !this.mainNavigation;
@@ -100,3 +99,12 @@ new Vue({
 		}
 	},
 });
+
+export default {
+	mounted() {
+		const { box } = this.$refs
+		const timeline = new TimelineLite()
+
+		timeline.to(box, 1, { x: 200, rotation: 90 })
+	}
+}
